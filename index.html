@@ -1,1000 +1,1385 @@
-
-      <p style="text-align:center;margin-top:16px;font-size:14px;color:var(--text-tertiary)">
-        ¿No sabes cuál elegir?
-        <a href="https://wa.link/hteek6" target="_blank" rel="noopener"
-           style="color:var(--accent-soft);font-weight:600;text-decoration:none;margin-left:6px"
-           onclick="if(window.LANDING)LANDING.track('pricing_whatsapp_clicked',{section:'pricing'})">💬 Hablar con Arjuna →</a>
-      </p>
-      <p style="text-align:center;margin-top:16px;font-size:14px;color:var(--text-tertiary)">
-        ¿No sabes cuál elegir?
-        <a href="https://wa.link/hteek6" target="_blank" rel="noopener" style="color:var(--accent-soft);font-weight:600;text-decoration:none;margin-left:6px" onclick="if(window.LANDING)LANDING.track('pricing_whatsapp_clicked',{section:'pricing'})">💬 Hablar con Arjuna →</a>
-      </p><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0a0a0f" />
-
-  <!-- LANDING_VERSION = 'landing-whatsapp-secondary-cta-v1' -->
-  <title>ArjunaFit — Entrenamiento, nutrición LATAM y Coach IA</title>
-  <meta name="description" content="Una app diseñada para que esta vez sí continúes: retos de glúteos, reducción de abdomen, nutrición LATAM, recetario y Coach IA. 7 días gratis." />
-
+  <title>ArjunaFit — La app de entrenamiento, nutrición y acompañamiento inteligente.</title>
+  <meta name="description" content="Una app diseñada para que esta vez sí termines lo que empezaste. Entrenamiento, nutrición LATAM y Coach IA en un solo ecosistema." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://arjunafit.com" />
   <meta property="og:title" content="ArjunaFit — Tu mejor versión, acompañada." />
-  <meta property="og:description" content="Una app de entrenamiento, nutrición y acompañamiento inteligente. Diseñada para que esta vez sí continúes." />
+  <meta property="og:description" content="Entrenamiento, nutrición y acompañamiento inteligente en una sola app." />
   <meta property="og:image" content="https://arjunafit.com/assets/img/og.jpg" />
-
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ArjunaFit — Tu mejor versión, acompañada." />
-  <meta name="twitter:description" content="Una app de entrenamiento, nutrición y acompañamiento inteligente." />
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b6dff'/%3E%3Cstop offset='1' stop-color='%23ff7eb9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='400' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
-
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b6dff'/%3E%3Cstop offset='1' stop-color='%23ff7eb9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,280;0,9..144,300;0,9..144,320;0,9..144,350;0,9..144,400;1,9..144,280;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,280;0,9..144,300;0,9..144,350;0,9..144,400;1,9..144,280;1,9..144,300;1,9..144,350&family=Inter+Tight:wght@400;450;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ════════════════════════════════════════════════════════════
+   ARJUNAFIT — LANDING v16
+   Wellness-tech premium LATAM
+   ════════════════════════════════════════════════════════════ */
 
-  <style>
+/* ─── TOKENS ─────────────────────────────────────────────── */
 :root {
-  --bg-base:#0a0a0f;--bg-elevated:#111118;--bg-card:#14141d;--bg-card-hover:#1a1a25;
-  --border-subtle:rgba(255,255,255,.06);--border-soft:rgba(255,255,255,.10);--border-strong:rgba(255,255,255,.16);
-  --text-primary:#f5f5f7;--text-secondary:rgba(245,245,247,.72);--text-tertiary:rgba(245,245,247,.48);--text-muted:rgba(245,245,247,.32);
-  --accent:#8b6dff;--accent-soft:#a18bff;--accent-glow:rgba(139,109,255,.25);--accent-deep:#5e3fe0;
-  --grad-aurora:linear-gradient(135deg,#8b6dff 0%,#c97bff 50%,#ff7eb9 100%);
-  --grad-card:linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.01) 100%);
-  --font-display:'Fraunces','Cormorant Garamond',Georgia,serif;
-  --font-body:'Inter Tight','Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-mono:'JetBrains Mono',ui-monospace,monospace;
-  --space-2xl:96px;--space-3xl:128px;--space-4xl:160px;
-  --r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--r-full:999px;
-  --shadow-md:0 4px 24px rgba(0,0,0,.4);--shadow-glow:0 0 80px var(--accent-glow);
-  --ease:cubic-bezier(.16,1,.3,1);--ease-out:cubic-bezier(.4,0,.2,1);
-  --container:1180px;
+  --bg:         #0a0a0f;
+  --bg-up:      #111118;
+  --bg-card:    #14141d;
+  --bg-card-h:  #1a1a25;
+  --b-subtle:   rgba(255,255,255,0.06);
+  --b-soft:     rgba(255,255,255,0.10);
+  --b-strong:   rgba(255,255,255,0.16);
+  --t1:         #f5f5f7;
+  --t2:         rgba(245,245,247,0.72);
+  --t3:         rgba(245,245,247,0.48);
+  --t4:         rgba(245,245,247,0.32);
+  --accent:     #8b6dff;
+  --accent-s:   #a18bff;
+  --accent-g:   rgba(139,109,255,0.22);
+  --accent-d:   #5e3fe0;
+  --grad:       linear-gradient(135deg,#8b6dff 0%,#c97bff 50%,#ff7eb9 100%);
+  --fd:         'Fraunces','Georgia',serif;
+  --fb:         'Inter Tight',-apple-system,sans-serif;
+  --ease:       cubic-bezier(0.16,1,0.3,1);
+  --r-full:     999px;
+  --r-xl:       24px;
+  --r-lg:       18px;
+  --r-md:       14px;
+  --container:  1160px;
 }
-*,*::before,*::after{box-sizing:border-box}
-*{margin:0;padding:0}
+
+/* ─── RESET ──────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg-base);color:var(--text-primary);font-family:var(--font-body);font-size:17px;line-height:1.65;letter-spacing:-.005em;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
-img,svg,video{display:block;max-width:100%;height:auto}
-button,input,select,textarea{font:inherit;color:inherit}
-button{cursor:pointer;border:none;background:none}
-a{color:inherit;text-decoration:none;transition:opacity .2s var(--ease-out)}
-::selection{background:var(--accent);color:white}
+body{
+  background:var(--bg);color:var(--t1);
+  font-family:var(--fb);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  text-rendering:optimizeLegibility;
+}
+img,svg{display:block;max-width:100%;height:auto}
+button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent);color:#fff}
 
-.eyebrow{font-family:var(--font-body);font-size:12.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-soft);display:inline-flex;align-items:center;gap:12px}
+/* ─── TYPOGRAPHY ─────────────────────────────────────────── */
+.eyebrow{
+  font-family:var(--fb);font-size:12px;font-weight:500;
+  letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-s);
+  display:inline-flex;align-items:center;gap:12px;
+}
 .eyebrow::before{content:'';width:28px;height:1px;background:var(--accent);display:inline-block}
-h1,h2,h3,h4{font-family:var(--font-display);font-weight:350;letter-spacing:-.015em;line-height:1.1;color:var(--text-primary);font-variation-settings:"opsz" 144}
-.h-display{font-size:clamp(42px,6.5vw,84px);line-height:1.05;letter-spacing:-.024em;font-weight:280;font-variation-settings:"opsz" 144}
-.h-section{font-size:clamp(32px,4.6vw,56px);line-height:1.1;letter-spacing:-.018em;font-weight:300;font-variation-settings:"opsz" 144}
-.italic-accent{font-style:italic;font-weight:300;color:var(--accent-soft);letter-spacing:-.005em}
-.lead{font-size:clamp(18px,1.55vw,21px);line-height:1.65;color:var(--text-secondary);font-weight:400;letter-spacing:-.005em;max-width:56ch}
 
+h1,h2,h3,h4{
+  font-family:var(--fd);font-weight:300;
+  letter-spacing:-0.015em;line-height:1.1;color:var(--t1);
+  font-variation-settings:"opsz" 144;
+}
+.h-display{
+  font-size:clamp(36px,5vw,64px);
+  line-height:1.08;letter-spacing:-0.022em;font-weight:280;
+}
+.h-section{
+  font-size:clamp(32px,4.5vw,56px);
+  line-height:1.1;letter-spacing:-0.018em;font-weight:300;
+}
+.italic-accent{font-style:italic;color:var(--accent-s);font-weight:280}
+.lead{
+  font-size:clamp(17px,1.5vw,20px);line-height:1.7;
+  color:var(--t2);letter-spacing:-0.005em;max-width:56ch;
+}
+
+/* ─── LAYOUT ─────────────────────────────────────────────── */
 .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
-.container-narrow{max-width:920px;margin:0 auto;padding:0 24px}
-section{padding:var(--space-4xl) 0;position:relative}
-@media(max-width:768px){section{padding:var(--space-2xl) 0}}
+.container-narrow{max-width:900px;margin:0 auto;padding:0 24px}
+section{padding:120px 0;position:relative}
+@media(max-width:768px){section{padding:80px 0}}
 
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 24px;transition:all .5s var(--ease)}
-.nav.scrolled{padding:13px 24px;background:rgba(10,10,15,.7);backdrop-filter:saturate(1.6) blur(24px);-webkit-backdrop-filter:saturate(1.6) blur(24px);border-bottom:1px solid var(--border-subtle)}
-.nav__inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.nav__logo{display:flex;align-items:center;gap:11px;font-family:var(--font-display);font-size:22px;font-weight:420;letter-spacing:-.018em;color:var(--text-primary);font-variation-settings:"opsz" 72}
-.nav__logo-mark{width:32px;height:32px;border-radius:8px;background:var(--grad-aurora);display:grid;place-items:center;font-size:14px;font-weight:600;color:white;font-family:var(--font-body);box-shadow:var(--shadow-glow)}
-.nav__links{display:flex;align-items:center;gap:36px;list-style:none}
-.nav__links a{font-size:14.5px;font-weight:450;color:var(--text-secondary);transition:color .25s}
-.nav__links a:hover{color:var(--text-primary)}
-.nav__cta{background:var(--text-primary);color:var(--bg-base);padding:11px 22px;border-radius:var(--r-full);font-size:14.5px;font-weight:500;transition:all .3s var(--ease)}
-.nav__cta:hover{background:white;transform:translateY(-1px);box-shadow:0 8px 24px rgba(255,255,255,.15)}
-.nav__menu-btn{display:none;width:38px;height:38px;border-radius:10px;background:var(--bg-card);border:1px solid var(--border-subtle);place-items:center}
-@media(max-width:860px){.nav__links{display:none}.nav__cta{display:none}.nav__menu-btn{display:grid}}
+/* ─── NAV ────────────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 32px;transition:all 0.5s var(--ease);
+}
+.nav.scrolled{
+  padding:14px 32px;
+  background:rgba(10,10,15,0.72);
+  backdrop-filter:blur(24px) saturate(1.6);
+  -webkit-backdrop-filter:blur(24px) saturate(1.6);
+  border-bottom:1px solid var(--b-subtle);
+}
+.nav__inner{
+  max-width:var(--container);margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.nav__logo{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--fd);font-size:21px;font-weight:400;
+  letter-spacing:-0.018em;color:var(--t1);
+  font-variation-settings:"opsz" 72;
+}
+.nav__logo-mark{
+  width:31px;height:31px;border-radius:8px;
+  background:var(--grad);display:grid;place-items:center;
+  font-size:14px;font-weight:600;color:#fff;font-family:var(--fb);
+}
+.nav__links{
+  display:flex;align-items:center;gap:32px;list-style:none;
+}
+.nav__links a{
+  font-size:14px;font-weight:450;color:var(--t2);
+  transition:color 0.25s;
+}
+.nav__links a:hover{color:var(--t1)}
+.nav__cta{
+  background:var(--t1);color:var(--bg);
+  padding:11px 22px;border-radius:var(--r-full);
+  font-size:14px;font-weight:500;letter-spacing:-0.01em;
+  transition:all 0.3s var(--ease);
+}
+.nav__cta:hover{background:#fff;transform:translateY(-1px);box-shadow:0 8px 24px rgba(255,255,255,0.14)}
+.nav__mob{
+  display:none;width:36px;height:36px;border-radius:9px;
+  background:var(--bg-card);border:1px solid var(--b-subtle);
+  place-items:center;
+}
+@media(max-width:860px){
+  .nav__links{display:none}.nav__cta{display:none}.nav__mob{display:grid}
+}
 
-/* MOBILE MENU */
-.mobile-menu{position:fixed;inset:0;z-index:200;background:rgba(10,10,15,.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);display:none;flex-direction:column;padding:80px 32px 40px;opacity:0;transition:opacity .3s var(--ease)}
-.mobile-menu.open{display:flex;opacity:1}
-.mobile-menu__close{position:absolute;top:22px;right:22px;width:38px;height:38px;border-radius:10px;background:var(--bg-card);border:1px solid var(--border-subtle);display:grid;place-items:center}
-.mobile-menu a{font-family:var(--font-display);font-size:32px;font-weight:320;letter-spacing:-.018em;line-height:1.15;padding:18px 0;border-bottom:1px solid var(--border-subtle);color:var(--text-primary);font-variation-settings:"opsz" 144}
-.mobile-menu__cta{margin-top:32px;background:var(--accent);color:white;text-align:center;padding:18px;border-radius:var(--r-full);font-family:var(--font-body)!important;font-size:16px!important;font-weight:500!important;border:none!important}
+/* Mobile menu */
+.mmenu{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(10,10,15,0.96);backdrop-filter:blur(24px);
+  display:none;flex-direction:column;padding:90px 32px 40px;
+}
+.mmenu.open{display:flex}
+.mmenu__close{
+  position:absolute;top:20px;right:20px;
+  width:36px;height:36px;border-radius:9px;
+  background:var(--bg-card);border:1px solid var(--b-subtle);
+  display:grid;place-items:center;
+}
+.mmenu a{
+  font-family:var(--fd);font-size:30px;font-weight:300;
+  letter-spacing:-0.018em;padding:16px 0;
+  border-bottom:1px solid var(--b-subtle);color:var(--t1);
+  font-variation-settings:"opsz" 144;
+}
+.mmenu__cta{
+  margin-top:28px;background:var(--accent);color:#fff;
+  text-align:center;padding:17px;border-radius:var(--r-full);
+  font-family:var(--fb)!important;font-size:15px!important;
+  font-weight:500!important;border:none!important;letter-spacing:-0.01em;
+}
 
-/* HERO */
-.hero{padding:180px 0 120px;position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:center}
-.hero::before{content:'';position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:1400px;height:900px;background:radial-gradient(ellipse at center,var(--accent-glow) 0%,transparent 65%);pointer-events:none;z-index:0;filter:blur(60px);opacity:.7}
-.hero__inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
-@media(max-width:980px){.hero__inner{grid-template-columns:1fr;gap:80px}.hero{padding:130px 0 80px;min-height:auto}}
-.hero__content{max-width:580px}
-.hero__eyebrow{margin-bottom:36px}
-.hero__title{margin-bottom:32px;font-size:clamp(36px,5vw,64px);line-height:1.1;letter-spacing:-.022em}
-.hero__title em{font-style:italic;color:var(--accent-soft);font-weight:300}
-.hero__sub{font-size:clamp(17px,1.4vw,19px);line-height:1.7;color:var(--text-secondary);margin-bottom:52px;max-width:480px;letter-spacing:-.005em}
-.hero__cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:44px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;border-radius:var(--r-full);font-size:15px;font-weight:500;letter-spacing:-.008em;transition:all .4s var(--ease);cursor:pointer;white-space:nowrap}
-.btn--primary{background:var(--text-primary);color:var(--bg-base)}
-.btn--primary:hover{background:white;transform:translateY(-2px);box-shadow:0 14px 36px rgba(255,255,255,.16)}
-.btn--ghost{background:transparent;color:var(--text-primary);border:1px solid var(--border-soft)}
-.btn--ghost:hover{border-color:var(--border-strong);background:rgba(255,255,255,.03);transform:translateY(-1px)}
-.btn--accent{background:var(--accent);color:white;box-shadow:0 12px 32px var(--accent-glow)}
-.btn--accent:hover{background:var(--accent-soft);transform:translateY(-2px);box-shadow:0 16px 44px var(--accent-glow)}
+/* ─── BTNS ───────────────────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:16px 30px;border-radius:var(--r-full);
+  font-size:15px;font-weight:500;letter-spacing:-0.008em;
+  transition:all 0.4s var(--ease);cursor:pointer;white-space:nowrap;
+}
+.btn--primary{background:var(--t1);color:var(--bg)}
+.btn--primary:hover{background:#fff;transform:translateY(-2px);box-shadow:0 14px 36px rgba(255,255,255,0.16)}
+.btn--ghost{background:transparent;color:var(--t1);border:1px solid var(--b-soft)}
+.btn--ghost:hover{border-color:var(--b-strong);background:rgba(255,255,255,0.03);transform:translateY(-1px)}
+.btn--accent{background:var(--accent);color:#fff;box-shadow:0 12px 32px var(--accent-g)}
+.btn--accent:hover{background:var(--accent-s);transform:translateY(-2px);box-shadow:0 16px 44px var(--accent-g)}
 .btn--lg{padding:18px 38px;font-size:16px}
-.hero__trust{display:flex;align-items:center;gap:14px;font-size:13.5px;color:var(--text-tertiary)}
+
+/* ─── HERO ───────────────────────────────────────────────── */
+.hero{
+  padding:160px 0 100px;
+  min-height:100vh;display:flex;align-items:center;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-10%;left:50%;transform:translateX(-50%);
+  width:1400px;height:900px;
+  background:radial-gradient(ellipse at center,var(--accent-g) 0%,transparent 65%);
+  filter:blur(60px);z-index:0;pointer-events:none;
+}
+.hero__inner{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.hero__content{max-width:560px}
+.hero__eyebrow{margin-bottom:32px}
+.hero__title{margin-bottom:28px}
+.hero__sub{
+  font-size:clamp(16px,1.4vw,18px);line-height:1.7;
+  color:var(--t2);margin-bottom:44px;max-width:460px;
+  letter-spacing:-0.005em;
+}
+.hero__cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:40px}
+.hero__trust{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--t3)}
 .hero__avatars{display:flex;align-items:center}
-.hero__avatars img,.hero__avatars .avatar-fallback{width:32px;height:32px;border-radius:50%;border:2px solid var(--bg-base);object-fit:cover}
-.hero__avatars > * + *{margin-left:-8px}
-.avatar-fallback{background:var(--grad-aurora);display:grid;place-items:center;color:white;font-size:12px;font-weight:600}
-.hero__trust strong{color:var(--text-primary);font-weight:500}
+.hero__avatars img,.hero__avatar-fb{
+  width:32px;height:32px;border-radius:50%;
+  border:2px solid var(--bg);object-fit:cover;
+}
+.hero__avatars>*+*{margin-left:-8px}
+.hero__avatar-fb{background:var(--grad);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:600}
+.hero__trust strong{color:var(--t1);font-weight:500}
 
-/* PHONE MOCKUP */
-.hero__mockup{position:relative;width:100%;max-width:420px;justify-self:end;perspective:1400px}
-@media(max-width:980px){.hero__mockup{justify-self:center;max-width:340px}}
-.phone{position:relative;width:100%;aspect-ratio:9/19.5;background:linear-gradient(155deg,#1d1d29 0%,#0a0a12 100%);border-radius:50px;border:1px solid rgba(255,255,255,.08);padding:12px;box-shadow:0 80px 140px rgba(0,0,0,.55),0 0 100px var(--accent-glow);transform:rotate(-2deg);transition:transform .8s var(--ease)}
+/* ─── PHONE MOCKUP ───────────────────────────────────────── */
+.hero__visual{
+  position:relative;width:100%;max-width:400px;
+  justify-self:center;
+}
+.phone{
+  position:relative;width:100%;aspect-ratio:9/19.5;
+  background:linear-gradient(155deg,#1d1d29 0%,#0a0a12 100%);
+  border-radius:48px;border:1px solid rgba(255,255,255,0.08);
+  padding:10px;
+  box-shadow:
+    0 80px 140px rgba(0,0,0,0.55),
+    0 0 100px var(--accent-g),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  transform:rotate(-2deg);transition:transform 0.8s var(--ease);
+}
 .phone:hover{transform:rotate(0deg) translateY(-10px)}
-.phone__screen{width:100%;height:100%;border-radius:40px;background:linear-gradient(180deg,#0a0a12 0%,#14141d 100%);position:relative;overflow:hidden;display:flex;flex-direction:column;padding:32px 22px 22px}
-.phone__notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:90px;height:26px;background:#000;border-radius:16px;z-index:3}
-.phone__status{margin-top:8px;display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:600;color:var(--text-primary);margin-bottom:28px}
-.phone__hello{font-family:var(--font-display);font-size:25px;font-weight:350;letter-spacing:-.015em;line-height:1.15;font-variation-settings:"opsz" 72}
-.phone__hello em{color:var(--accent-soft);font-style:italic}
-.phone__hello-sub{font-size:12px;color:var(--text-tertiary);margin-top:6px}
-.phone__ring{width:100%;margin-bottom:14px;background:rgba(255,255,255,.025);border:1px solid var(--border-subtle);border-radius:20px;padding:20px;display:flex;align-items:center;gap:18px}
-.ring-svg{width:68px;height:68px;flex-shrink:0}
-.ring-svg circle{fill:none;stroke-width:5.5;stroke-linecap:round}
-.ring-svg .ring-bg{stroke:rgba(255,255,255,.06)}
-.ring-svg .ring-fill{stroke:url(#auroraGrad);stroke-dasharray:188.5;stroke-dashoffset:56.5;transform:rotate(-90deg);transform-origin:50% 50%}
-.ring-info__pct{font-family:var(--font-display);font-size:30px;font-weight:320;letter-spacing:-.015em;line-height:1;font-variation-settings:"opsz" 96}
-.ring-info__label{font-size:11px;color:var(--text-tertiary);margin-top:3px}
-.ring-info__day{font-size:11px;color:var(--accent-soft);margin-top:7px;font-weight:500}
-.phone__tile{background:rgba(255,255,255,.025);border:1px solid var(--border-subtle);border-radius:18px;padding:18px;margin-bottom:12px}
-.phone__tile-label{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-tertiary);margin-bottom:7px;font-weight:600}
-.phone__tile-title{font-size:14.5px;font-weight:500;color:var(--text-primary);margin-bottom:3px}
-.phone__tile-meta{font-size:11.5px;color:var(--text-tertiary)}
+.phone__screen{
+  width:100%;height:100%;border-radius:40px;
+  background:linear-gradient(180deg,#0a0a12 0%,#12121a 100%);
+  overflow:hidden;display:flex;flex-direction:column;
+  padding:28px 18px 18px;position:relative;
+}
+.phone__notch{
+  position:absolute;top:10px;left:50%;transform:translateX(-50%);
+  width:80px;height:22px;background:#000;border-radius:14px;z-index:3;
+}
+.phone__status{
+  display:flex;justify-content:space-between;font-size:10px;
+  font-weight:600;color:var(--t1);margin-bottom:22px;margin-top:4px;
+}
+.phone__greeting{margin-bottom:20px}
+.phone__hello{
+  font-family:var(--fd);font-size:22px;font-weight:350;
+  letter-spacing:-0.015em;line-height:1.15;
+  font-variation-settings:"opsz" 72;
+}
+.phone__hello em{color:var(--accent-s);font-style:italic}
+.phone__hello-sub{font-size:11px;color:var(--t3);margin-top:4px}
+
+.phone__ring{
+  width:100%;margin-bottom:12px;
+  background:rgba(255,255,255,0.025);border:1px solid var(--b-subtle);
+  border-radius:18px;padding:16px;display:flex;align-items:center;gap:14px;
+}
+.ring-svg{width:60px;height:60px;flex-shrink:0}
+.ring-svg circle{fill:none;stroke-width:5;stroke-linecap:round}
+.ring-bg{stroke:rgba(255,255,255,0.06)}
+.ring-fill{
+  stroke:url(#ag);stroke-dasharray:188.5;stroke-dashoffset:56.5;
+  transform:rotate(-90deg);transform-origin:50% 50%;
+}
+.ring-pct{
+  font-family:var(--fd);font-size:26px;font-weight:320;
+  letter-spacing:-0.015em;line-height:1;
+  font-variation-settings:"opsz" 96;
+}
+.ring-label{font-size:10px;color:var(--t3);margin-top:3px}
+.ring-day{font-size:10px;color:var(--accent-s);margin-top:5px;font-weight:500}
+
+.phone__tile{
+  background:rgba(255,255,255,0.025);border:1px solid var(--b-subtle);
+  border-radius:16px;padding:14px;margin-bottom:10px;
+}
+.phone__tile-eyebrow{
+  font-size:9px;text-transform:uppercase;letter-spacing:0.1em;
+  color:var(--t3);margin-bottom:5px;font-weight:600;
+}
+.phone__tile-title{font-size:13px;font-weight:500;color:var(--t1);margin-bottom:2px;letter-spacing:-0.01em}
+.phone__tile-meta{font-size:10.5px;color:var(--t3)}
 .phone__tile-row{display:flex;align-items:center;justify-content:space-between}
-.phone__tile-pill{background:var(--accent);color:white;padding:5px 11px;border-radius:var(--r-full);font-size:10px;font-weight:600}
-.hero__chip{position:absolute;background:rgba(20,20,29,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-soft);border-radius:var(--r-md);padding:13px 17px;display:flex;align-items:center;gap:11px;font-size:12.5px;font-weight:450;color:var(--text-primary);box-shadow:0 16px 40px rgba(0,0,0,.4);z-index:3}
-.hero__chip--top{top:10%;left:-14%}
-.hero__chip--bottom{bottom:16%;right:-12%}
-.hero__chip-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);animation:pulse 2.4s infinite var(--ease)}
+.phone__tile-pill{
+  background:var(--accent);color:#fff;
+  padding:4px 10px;border-radius:var(--r-full);font-size:9px;font-weight:600;
+}
+
+/* Chips flotantes */
+.hero__chip{
+  position:absolute;
+  background:rgba(18,18,26,0.82);
+  backdrop-filter:blur(20px) saturate(1.4);
+  -webkit-backdrop-filter:blur(20px) saturate(1.4);
+  border:1px solid var(--b-soft);border-radius:var(--r-md);
+  padding:12px 16px;display:flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:450;color:var(--t1);
+  box-shadow:0 16px 40px rgba(0,0,0,0.4);z-index:3;
+}
+.chip--tl{top:8%;left:-16%}
+.chip--br{bottom:14%;right:-14%}
+.chip__dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 10px var(--accent);
+  animation:pulse 2.4s infinite var(--ease);
+}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.15)}}
-@media(max-width:980px){.hero__chip--top{top:2%;left:-2%}.hero__chip--bottom{bottom:6%;right:-2%}}
 
-/* SECTIONS */
-.section-head{text-align:center;max-width:720px;margin:0 auto var(--space-3xl)}
-.section-head .eyebrow{margin-bottom:24px}
-.section-head__lead{margin-top:28px;font-size:clamp(17px,1.45vw,19px);line-height:1.7;color:var(--text-secondary);max-width:580px;margin-left:auto;margin-right:auto;letter-spacing:-.005em}
+@media(max-width:980px){
+  .hero__inner{grid-template-columns:1fr;gap:64px;text-align:left}
+  .hero{padding:130px 0 80px;min-height:auto}
+  .hero__visual{max-width:320px;justify-self:flex-start}
+  .chip--tl{top:2%;left:0}
+  .chip--br{bottom:4%;right:0}
+}
 
-/* PROBLEM */
-.problem__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:var(--space-2xl)}
-@media(max-width:860px){.problem__grid{grid-template-columns:1fr;gap:16px}}
-.problem-card{background:var(--grad-card);border:1px solid var(--border-subtle);border-radius:var(--r-xl);padding:44px 36px;transition:all .5s var(--ease)}
-.problem-card:hover{border-color:var(--border-soft);transform:translateY(-4px)}
-.problem-card__num{font-family:var(--font-display);font-size:14px;font-weight:400;color:var(--accent-soft);font-style:italic;margin-bottom:24px}
-.problem-card__title{font-family:var(--font-display);font-size:23px;font-weight:380;letter-spacing:-.012em;line-height:1.25;margin-bottom:16px;font-variation-settings:"opsz" 72}
-.problem-card__body{font-size:15.5px;line-height:1.68;color:var(--text-secondary)}
+/* ─── PROBLEMA ───────────────────────────────────────────── */
+.problem__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:64px}
+@media(max-width:860px){.problem__grid{grid-template-columns:1fr;gap:14px}}
 
-/* SOLUTION */
-.solution{background:linear-gradient(180deg,var(--bg-base) 0%,#0e0e16 50%,var(--bg-base) 100%);position:relative}
-.solution::before{content:'';position:absolute;top:40%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 70%);filter:blur(80px);z-index:0}
-.solution__container{position:relative;z-index:1}
-.solution__intro{max-width:720px;margin:0 auto var(--space-2xl);text-align:center}
-.solution__pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-@media(max-width:860px){.solution__pillars{grid-template-columns:1fr;gap:18px}}
-.pillar{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--r-xl);padding:44px 36px;transition:all .5s var(--ease)}
-.pillar:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:0 20px 60px rgba(139,109,255,.15)}
-.pillar__icon{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-deep) 100%);display:grid;place-items:center;margin-bottom:28px;box-shadow:0 8px 24px var(--accent-glow)}
-.pillar__icon svg{width:22px;height:22px;stroke:white}
-.pillar__title{font-family:var(--font-display);font-size:25px;font-weight:380;letter-spacing:-.015em;line-height:1.2;margin-bottom:16px;font-variation-settings:"opsz" 72}
-.pillar__body{font-size:15.5px;line-height:1.68;color:var(--text-secondary)}
+.prob-card{
+  background:linear-gradient(180deg,rgba(255,255,255,0.04) 0%,rgba(255,255,255,0.01) 100%);
+  border:1px solid var(--b-subtle);border-radius:var(--r-xl);
+  padding:40px 34px;transition:all 0.5s var(--ease);
+}
+.prob-card:hover{border-color:var(--b-soft);transform:translateY(-4px)}
+.prob-card__num{
+  font-size:12px;font-weight:500;color:var(--accent-s);
+  font-style:italic;font-family:var(--fd);margin-bottom:22px;
+  font-variation-settings:"opsz" 72;
+}
+.prob-card__title{
+  font-family:var(--fd);font-size:22px;font-weight:380;
+  letter-spacing:-0.012em;line-height:1.25;margin-bottom:14px;
+  font-variation-settings:"opsz" 72;
+}
+.prob-card__body{font-size:15px;line-height:1.7;color:var(--t2)}
 
-/* HOW IT WORKS */
-.how__steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-@media(max-width:860px){.how__steps{grid-template-columns:repeat(2,1fr);gap:32px 24px}}
-@media(max-width:540px){.how__steps{grid-template-columns:1fr;gap:8px}}
-.how-step{position:relative;padding-top:8px}
-.how-step__num{font-family:var(--font-mono);font-size:13px;font-weight:500;color:var(--accent-soft);letter-spacing:.05em;margin-bottom:24px;position:relative;display:inline-block}
-.how-step__line{position:absolute;top:16px;left:32px;right:-28px;height:1px;background:linear-gradient(90deg,var(--border-strong) 0%,var(--border-subtle) 100%)}
+/* ─── SECCIÓN HEAD ───────────────────────────────────────── */
+.section-head{text-align:center;max-width:720px;margin:0 auto 72px}
+.section-head .eyebrow{margin-bottom:22px}
+.section-head__lead{
+  margin-top:24px;font-size:clamp(16px,1.4vw,18px);
+  line-height:1.72;color:var(--t2);max-width:560px;
+  margin-left:auto;margin-right:auto;
+}
+
+/* ─── SOLUCIÓN ───────────────────────────────────────────── */
+.solution{background:linear-gradient(180deg,var(--bg) 0%,#0e0e16 50%,var(--bg) 100%);position:relative}
+.solution::before{
+  content:'';position:absolute;top:40%;left:-8%;
+  width:500px;height:500px;
+  background:radial-gradient(circle,var(--accent-g) 0%,transparent 70%);
+  filter:blur(80px);z-index:0;
+}
+.solution__pillars{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+}
+@media(max-width:860px){.solution__pillars{grid-template-columns:1fr;gap:16px}}
+
+.pillar{
+  background:var(--bg-card);border:1px solid var(--b-subtle);
+  border-radius:var(--r-xl);padding:40px 34px;
+  transition:all 0.5s var(--ease);
+}
+.pillar:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:0 20px 60px rgba(139,109,255,0.12)}
+.pillar__icon{
+  width:46px;height:46px;border-radius:13px;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent-d) 100%);
+  display:grid;place-items:center;margin-bottom:26px;
+  box-shadow:0 8px 24px var(--accent-g);
+}
+.pillar__icon svg{width:21px;height:21px;stroke:#fff}
+.pillar__title{
+  font-family:var(--fd);font-size:23px;font-weight:380;
+  letter-spacing:-0.012em;line-height:1.2;margin-bottom:14px;
+  font-variation-settings:"opsz" 72;
+}
+.pillar__body{font-size:15px;line-height:1.7;color:var(--t2)}
+
+/* ─── CÓMO FUNCIONA ──────────────────────────────────────── */
+.how__steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media(max-width:860px){.how__steps{grid-template-columns:repeat(2,1fr);gap:28px 20px}}
+@media(max-width:520px){.how__steps{grid-template-columns:1fr;gap:0}}
+
+.how-step{position:relative;padding-top:6px}
+.how-step__num{
+  font-size:12px;font-weight:500;color:var(--accent-s);
+  letter-spacing:0.05em;font-family:var(--fb);
+  margin-bottom:22px;display:inline-block;position:relative;
+}
+.how-step__num::before{
+  content:'';position:absolute;top:50%;left:-4px;
+  width:28px;height:28px;background:var(--accent-g);
+  border-radius:50%;transform:translateY(-50%);
+  filter:blur(10px);z-index:-1;
+}
+.how-step__line{
+  position:absolute;top:14px;left:30px;right:-24px;
+  height:1px;background:linear-gradient(90deg,var(--b-strong) 0%,var(--b-subtle) 100%);
+}
 @media(max-width:860px){.how-step__line{display:none}}
-.how-step__title{font-family:var(--font-display);font-size:21px;font-weight:380;letter-spacing:-.015em;line-height:1.25;margin-bottom:14px;font-variation-settings:"opsz" 72}
-.how-step__body{font-size:14.5px;line-height:1.68;color:var(--text-secondary)}
+.how-step__title{
+  font-family:var(--fd);font-size:20px;font-weight:380;
+  letter-spacing:-0.012em;line-height:1.25;margin-bottom:12px;
+  font-variation-settings:"opsz" 72;
+}
+.how-step__body{font-size:14px;line-height:1.7;color:var(--t2)}
+@media(max-width:520px){
+  .how-step{padding:24px 0 24px 26px;border-left:1px solid var(--b-subtle)}
+  .how-step:last-child{padding-bottom:0}
+  .how-step__num{margin-bottom:10px}
+}
 
-/* ECOSYSTEM */
+/* ─── ECOSISTEMA ─────────────────────────────────────────── */
 .ecosystem__inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 @media(max-width:980px){.ecosystem__inner{grid-template-columns:1fr;gap:56px}}
-.ecosystem__visual{position:relative;aspect-ratio:1;width:100%;max-width:480px;margin:0 auto}
-.ecosystem-node{position:absolute;background:var(--bg-card);border:1px solid var(--border-soft);border-radius:var(--r-md);padding:12px 18px;font-size:13px;font-weight:500;color:var(--text-primary);display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-md)}
-.ecosystem-node svg{width:16px;height:16px;stroke:var(--accent-soft)}
-.ecosystem-node--core{top:50%;left:50%;transform:translate(-50%,-50%);background:var(--grad-aurora);color:white;padding:24px 32px;border:none;border-radius:var(--r-lg);font-family:var(--font-display);font-size:19px;font-weight:380;font-variation-settings:"opsz" 72;z-index:2;box-shadow:0 20px 60px var(--accent-glow)}
-.ecosystem-node--core svg{stroke:white;width:20px;height:20px}
-.ecosystem-node--1{top:8%;left:20%}.ecosystem-node--2{top:18%;right:8%}.ecosystem-node--3{top:55%;right:0%}
-.ecosystem-node--4{bottom:8%;right:22%}.ecosystem-node--5{bottom:18%;left:6%}.ecosystem-node--6{top:50%;left:0%}
-.ecosystem-svg{position:absolute;inset:0;z-index:1;pointer-events:none}
-.ecosystem__list{list-style:none;margin-top:32px}
-.ecosystem__list li{padding:18px 0;border-bottom:1px solid var(--border-subtle);display:flex;align-items:flex-start;gap:16px}
-.ecosystem__list li:last-child{border-bottom:none}
-.ecosystem__list-num{font-family:var(--font-mono);font-size:13px;color:var(--accent-soft);flex-shrink:0;margin-top:2px}
-.ecosystem__list-text strong{font-weight:500;color:var(--text-primary);display:block;margin-bottom:4px;font-size:16px}
-.ecosystem__list-text span{font-size:14.5px;color:var(--text-secondary);line-height:1.55}
 
-/* EXPERIENCE */
-.experience{background:var(--bg-elevated)}
-.experience__intro{text-align:center;max-width:720px;margin:0 auto var(--space-2xl)}
-.experience__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-@media(max-width:860px){.experience__grid{grid-template-columns:1fr}}
-.exp-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--r-xl);padding:40px 36px;overflow:hidden;position:relative;transition:all .4s var(--ease)}
-.exp-card:hover{border-color:var(--border-soft);transform:translateY(-4px)}
+.eco-visual{position:relative;aspect-ratio:1;width:100%;max-width:460px;margin:0 auto}
+.eco-node{
+  position:absolute;background:var(--bg-card);border:1px solid var(--b-soft);
+  border-radius:var(--r-md);padding:10px 16px;font-size:12px;
+  font-weight:500;color:var(--t1);display:flex;align-items:center;gap:9px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.4);
+}
+.eco-node svg{width:14px;height:14px;stroke:var(--accent-s);flex-shrink:0}
+.eco-node--core{
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  background:var(--grad);color:#fff;padding:20px 28px;
+  border:none;border-radius:var(--r-lg);
+  font-family:var(--fd);font-size:17px;font-weight:380;
+  letter-spacing:-0.01em;font-variation-settings:"opsz" 72;
+  z-index:2;box-shadow:0 20px 60px var(--accent-g);
+}
+.eco-node--core svg{stroke:#fff;width:18px;height:18px}
+.eco-n1{top:6%;left:18%}
+.eco-n2{top:16%;right:6%}
+.eco-n3{top:54%;right:0}
+.eco-n4{bottom:6%;right:20%}
+.eco-n5{bottom:16%;left:4%}
+.eco-n6{top:48%;left:0}
+.eco-svg{position:absolute;inset:0;z-index:1;pointer-events:none}
+
+.eco-list{list-style:none;margin-top:28px}
+.eco-list li{
+  padding:16px 0;border-bottom:1px solid var(--b-subtle);
+  display:flex;align-items:flex-start;gap:14px;
+}
+.eco-list li:last-child{border-bottom:none}
+.eco-num{font-size:12px;color:var(--accent-s);flex-shrink:0;margin-top:2px;font-weight:500}
+.eco-text strong{font-weight:500;color:var(--t1);display:block;margin-bottom:3px;font-size:15px}
+.eco-text span{font-size:14px;color:var(--t2);line-height:1.6}
+
+/* ─── EXPERIENCIA ────────────────────────────────────────── */
+.experience{background:var(--bg-up)}
+.exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:860px){.exp-grid{grid-template-columns:1fr}}
 .exp-card--large{grid-column:span 2}
 @media(max-width:860px){.exp-card--large{grid-column:span 1}}
-.exp-card__eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-soft);margin-bottom:16px;font-weight:500}
-.exp-card__title{font-family:var(--font-display);font-size:clamp(24px,2.4vw,30px);font-weight:350;letter-spacing:-.018em;line-height:1.18;margin-bottom:18px;font-variation-settings:"opsz" 96}
-.exp-card__body{font-size:15.5px;line-height:1.7;color:var(--text-secondary);max-width:48ch;margin-bottom:28px}
-.exp-mock{background:var(--bg-base);border:1px solid var(--border-subtle);border-radius:var(--r-lg);padding:22px;margin-top:auto}
-.exp-mock__row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border-subtle)}
-.exp-mock__row:last-child{border-bottom:none}
-.exp-mock__label{font-size:13.5px;color:var(--text-secondary)}
-.exp-mock__value{font-size:14px;font-weight:500;color:var(--text-primary)}
-.exp-mock__value--flame{display:inline-flex;align-items:center;gap:6px;color:var(--accent-soft)}
-.exp-mock__bar{width:100%;height:6px;background:rgba(255,255,255,.06);border-radius:99px;margin-top:14px;overflow:hidden}
-.exp-mock__bar-fill{height:100%;background:var(--grad-aurora);border-radius:99px}
-.exp-chat{background:var(--bg-base);border:1px solid var(--border-subtle);border-radius:var(--r-lg);padding:18px;margin-top:auto;display:flex;flex-direction:column;gap:10px}
-.bubble{padding:12px 16px;border-radius:16px;font-size:13.5px;line-height:1.45;max-width:85%}
-.bubble--user{background:rgba(255,255,255,.06);color:var(--text-primary);align-self:flex-end;border-bottom-right-radius:4px}
-.bubble--ai{background:linear-gradient(135deg,rgba(139,109,255,.15) 0%,rgba(201,123,255,.10) 100%);border:1px solid var(--accent-glow);color:var(--text-primary);align-self:flex-start;border-bottom-left-radius:4px}
-.streak-grid{display:grid;grid-template-columns:repeat(14,1fr);gap:5px;margin-top:auto}
-.streak-dot{aspect-ratio:1;background:rgba(255,255,255,.05);border-radius:4px}
-.streak-dot.l1{background:rgba(139,109,255,.25)}.streak-dot.l2{background:rgba(139,109,255,.5)}.streak-dot.l3{background:rgba(139,109,255,.75)}.streak-dot.l4{background:var(--accent);box-shadow:0 0 12px var(--accent-glow)}
 
-/* TRANSFORM */
+.exp-card{
+  background:var(--bg-card);border:1px solid var(--b-subtle);
+  border-radius:var(--r-xl);padding:38px 34px;
+  transition:all 0.4s var(--ease);
+}
+.exp-card:hover{border-color:var(--b-soft);transform:translateY(-4px)}
+.exp-eyebrow{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-s);margin-bottom:14px;font-weight:500}
+.exp-title{
+  font-family:var(--fd);font-size:clamp(22px,2.2vw,28px);font-weight:350;
+  letter-spacing:-0.018em;line-height:1.18;margin-bottom:14px;
+  font-variation-settings:"opsz" 96;
+}
+.exp-body{font-size:15px;line-height:1.7;color:var(--t2);max-width:46ch;margin-bottom:24px}
+
+.exp-mock{
+  background:var(--bg);border:1px solid var(--b-subtle);
+  border-radius:var(--r-lg);padding:20px;
+}
+.exp-mock-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:11px 0;border-bottom:1px solid var(--b-subtle);
+}
+.exp-mock-row:last-child{border-bottom:none}
+.exp-mock-label{font-size:13px;color:var(--t2)}
+.exp-mock-val{font-size:13.5px;font-weight:500;color:var(--t1)}
+.exp-mock-val--accent{display:inline-flex;align-items:center;gap:6px;color:var(--accent-s)}
+.exp-mock-val--accent svg{stroke:var(--accent-s)}
+.exp-bar-wrap{width:100%;height:5px;background:rgba(255,255,255,0.06);border-radius:99px;margin-top:12px;overflow:hidden}
+.exp-bar-fill{height:100%;background:var(--grad);border-radius:99px}
+
+.exp-chat{
+  background:var(--bg);border:1px solid var(--b-subtle);
+  border-radius:var(--r-lg);padding:16px;
+  display:flex;flex-direction:column;gap:9px;
+}
+.bubble{padding:11px 14px;border-radius:14px;font-size:13px;line-height:1.45;max-width:86%}
+.bubble--u{background:rgba(255,255,255,0.06);color:var(--t1);align-self:flex-end;border-bottom-right-radius:4px}
+.bubble--ai{
+  background:linear-gradient(135deg,rgba(139,109,255,0.14) 0%,rgba(201,123,255,0.09) 100%);
+  border:1px solid var(--accent-g);color:var(--t1);
+  align-self:flex-start;border-bottom-left-radius:4px;
+}
+
+.streak-grid{display:grid;grid-template-columns:repeat(14,1fr);gap:4px}
+.s{aspect-ratio:1;background:rgba(255,255,255,0.05);border-radius:3px}
+.s.l1{background:rgba(139,109,255,0.2)}
+.s.l2{background:rgba(139,109,255,0.45)}
+.s.l3{background:rgba(139,109,255,0.7)}
+.s.l4{background:var(--accent);box-shadow:0 0 10px var(--accent-g)}
+
+/* ─── TRANSFORMACIÓN ─────────────────────────────────────── */
 .transform__inner{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
 @media(max-width:980px){.transform__inner{grid-template-columns:1fr;gap:48px}}
-.transform__values{display:grid;gap:4px;margin-top:36px}
-.value-row{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--border-subtle);align-items:baseline}
-.value-row:first-child{border-top:none}
-.value-row__num{font-family:var(--font-mono);font-size:13px;color:var(--text-muted);letter-spacing:.05em}
-.value-row__label{font-family:var(--font-display);font-size:23px;font-weight:380;letter-spacing:-.012em;line-height:1.2;margin-bottom:8px;font-variation-settings:"opsz" 72}
-.value-row__desc{font-size:15px;color:var(--text-secondary);line-height:1.65}
 
-/* TESTIMONIALS */
-.testimonials{background:var(--bg-elevated)}
-.testimonials__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:var(--space-2xl)}
-@media(max-width:860px){.testimonials__grid{grid-template-columns:1fr}}
-.testimonial{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--r-xl);padding:48px 44px;transition:all .5s var(--ease);position:relative}
-.testimonial::before{content:'\201C';position:absolute;top:28px;right:36px;font-family:var(--font-display);font-size:80px;line-height:1;color:var(--accent);opacity:.12;font-weight:400;pointer-events:none}
-.testimonial:hover{border-color:var(--border-soft);transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.3)}
-.testimonial__stars{display:flex;gap:3px;margin-bottom:24px}
-.testimonial__stars svg{width:13px;height:13px;fill:#f9c74f}
-.testimonial__quote{font-family:var(--font-display);font-size:clamp(19px,1.9vw,22px);font-weight:350;letter-spacing:-.01em;line-height:1.42;margin-bottom:32px;font-variation-settings:"opsz" 72;color:var(--text-primary)}
-.testimonial__author{display:flex;align-items:center;gap:14px}
-.testimonial__avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1.5px solid var(--border-soft)}
-.testimonial__name{font-size:15px;font-weight:500;color:var(--text-primary);margin-bottom:3px}
-.testimonial__meta{font-size:12.5px;color:var(--text-tertiary)}
-
-/* COMMUNITY */
-.community{position:relative;overflow:hidden}
-.community::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:500px;background:radial-gradient(ellipse at center,var(--accent-glow) 0%,transparent 70%);filter:blur(80px);opacity:.5;z-index:0;pointer-events:none}
-.community__inner{position:relative;z-index:1;text-align:center}
-.community__title{margin-bottom:28px}
-.community__lead{font-size:clamp(17px,1.5vw,19px);line-height:1.7;color:var(--text-secondary);max-width:540px;margin:0 auto 56px}
-.community__stats{display:flex;align-items:center;justify-content:center;gap:40px}
-.community__stat{text-align:center}
-.community__stat-num{font-family:var(--font-display);font-size:clamp(28px,3vw,38px);font-weight:320;letter-spacing:-.02em;line-height:1;margin-bottom:8px;font-variation-settings:"opsz" 144}
-.community__stat-label{font-size:13px;color:var(--text-tertiary)}
-.community__stat-divider{width:1px;height:48px;background:var(--border-soft)}
-@media(max-width:860px){.founder-grid{grid-template-columns:1fr!important;gap:40px!important}}
-  @media(max-width:600px){.community__stats{flex-direction:column;gap:28px}.community__stat-divider{width:48px;height:1px}}
-
-/* PRICING */
-.pricing__intro{text-align:center;max-width:700px;margin:0 auto var(--space-2xl)}
-.pricing__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:56px}
-@media(max-width:860px){.pricing__grid{grid-template-columns:1fr}}
-.price-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--r-xl);padding:40px 36px;display:flex;flex-direction:column;transition:all .4s var(--ease);position:relative}
-.price-card:hover{border-color:var(--border-soft);transform:translateY(-4px)}
-.price-card--featured{border-color:var(--accent);background:linear-gradient(180deg,rgba(139,109,255,.06) 0%,var(--bg-card) 60%);box-shadow:0 0 40px rgba(139,109,255,.1)}
-.price-card__badge{position:absolute;top:24px;right:24px;background:var(--accent);color:white;padding:5px 12px;border-radius:var(--r-full);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
-.price-card__eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-soft);font-weight:500;margin-bottom:14px}
-.price-card__title{font-family:var(--font-display);font-size:30px;font-weight:350;letter-spacing:-.018em;line-height:1.18;margin-bottom:14px;font-variation-settings:"opsz" 96}
-.price-card__desc{font-size:14.5px;line-height:1.55;color:var(--text-secondary);margin-bottom:24px}
-.price-card__price{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
-.price-card__amount{font-family:var(--font-display);font-size:52px;font-weight:320;letter-spacing:-.025em;line-height:1;font-variation-settings:"opsz" 144}
-.price-card__unit{font-size:14px;color:var(--text-tertiary)}
-.price-card__sub{font-size:13px;color:var(--text-tertiary);margin-bottom:24px}
-.price-card__features{list-style:none;margin-bottom:28px;display:grid;gap:12px}
-.price-card__features li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;line-height:1.5;color:var(--text-secondary)}
-.price-card__features svg{width:16px;height:16px;flex-shrink:0;margin-top:3px;stroke:var(--accent-soft)}
-.price-card__cta-row{display:flex;gap:10px;margin-top:auto}
-.price-card__cta-row .btn{flex:1;font-size:14px;padding:14px 18px}
-
-.plans-secondary{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:40px}
-@media(max-width:860px){.plans-secondary{grid-template-columns:1fr}}
-.plan-row{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--r-lg);padding:26px;display:flex;flex-direction:column;transition:border-color .3s}
-.plan-row:hover{border-color:var(--border-soft)}
-.plan-row__eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-tertiary);font-weight:500;margin-bottom:8px}
-.plan-row__title{font-family:var(--font-display);font-size:22px;font-weight:380;letter-spacing:-.012em;line-height:1.2;margin-bottom:10px;font-variation-settings:"opsz" 72}
-.plan-row__price{font-family:var(--font-display);font-size:28px;font-weight:350;letter-spacing:-.015em;margin-bottom:16px;font-variation-settings:"opsz" 96}
-.plan-row__price span{font-size:13px;color:var(--text-tertiary);margin-left:4px}
-.plan-row__desc{font-size:13.5px;color:var(--text-secondary);line-height:1.5;margin-bottom:18px;flex:1}
-.plan-row__link{font-size:13.5px;color:var(--accent-soft);font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
-.plan-row__link:hover{gap:10px}
-
-.guarantee{background:var(--bg-card);border:1px solid var(--border-soft);border-radius:var(--r-lg);padding:28px 32px;display:flex;align-items:center;gap:22px;max-width:720px;margin:0 auto}
-.guarantee__icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-deep) 100%);display:grid;place-items:center;flex-shrink:0}
-.guarantee__icon svg{width:20px;height:20px;stroke:white}
-.guarantee__title{font-family:var(--font-display);font-size:20px;font-weight:380;letter-spacing:-.012em;line-height:1.25;margin-bottom:6px;font-variation-settings:"opsz" 72}
-.guarantee__body{font-size:14.5px;color:var(--text-secondary);line-height:1.6}
-@media(max-width:600px){.guarantee{flex-direction:column;text-align:center;gap:16px}}
-
-/* FAQ */
-.faq__list{max-width:760px;margin:var(--space-2xl) auto 0;display:grid;gap:6px}
-.faq-item{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--r-lg);overflow:hidden;transition:all .4s var(--ease)}
-.faq-item[open]{border-color:var(--border-soft);background:var(--bg-card-hover)}
-.faq-item summary{list-style:none;cursor:pointer;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;font-family:var(--font-display);font-size:20px;font-weight:380;letter-spacing:-.012em;line-height:1.3;color:var(--text-primary);font-variation-settings:"opsz" 72}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:'';width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.06) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f7' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>") center/contain no-repeat;transition:transform .4s var(--ease);flex-shrink:0}
-.faq-item[open] summary::after{transform:rotate(180deg)}
-.faq-item__body{padding:0 30px 28px;font-size:16px;line-height:1.72;color:var(--text-secondary)}
-
-/* CTA FINAL */
-.cta-final{text-align:center;padding:var(--space-4xl) 0;position:relative;overflow:hidden}
-.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;height:600px;background:radial-gradient(ellipse at center,var(--accent-glow) 0%,transparent 70%);filter:blur(60px);z-index:0}
-.cta-final__inner{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 24px}
-.cta-final__title{font-family:var(--font-display);font-size:clamp(38px,5.8vw,68px);font-weight:300;letter-spacing:-.022em;line-height:1.08;margin-bottom:30px;font-variation-settings:"opsz" 144}
-.cta-final__title em{font-style:italic;color:var(--accent-soft);font-weight:300}
-.cta-final__sub{font-size:clamp(17px,1.5vw,19px);line-height:1.65;color:var(--text-secondary);margin-bottom:48px;max-width:540px;margin-left:auto;margin-right:auto}
-.cta-final__row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.cta-final__trust{margin-top:36px;font-size:13px;color:var(--text-tertiary);display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
-.cta-final__trust span{display:inline-flex;align-items:center;gap:8px}
-.cta-final__trust svg{stroke:var(--accent-soft);opacity:.7}
-
-/* FOOTER */
-.footer{border-top:1px solid var(--border-subtle);padding:60px 0 40px}
-.footer__inner{max-width:var(--container);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.footer__brand{display:flex;flex-direction:column;gap:4px}
-.footer__logo{font-family:var(--font-display);font-size:22px;font-weight:420;letter-spacing:-.018em;font-variation-settings:"opsz" 72}
-.footer__tagline{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);font-weight:500}
-.footer__links{display:flex;gap:28px;list-style:none;flex-wrap:wrap}
-.footer__links a{font-size:14px;color:var(--text-tertiary);transition:color .25s}
-.footer__links a:hover{color:var(--text-primary)}
-.footer__app-link{color:var(--accent-soft)!important;font-weight:500}
-.footer__copy{width:100%;margin-top:32px;padding-top:24px;border-top:1px solid var(--border-subtle);font-size:13px;color:var(--text-muted);text-align:center}
-
-/* ANIMATIONS */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.reveal.in{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.08s}.reveal-delay-2{transition-delay:.16s}.reveal-delay-3{transition-delay:.24s}.reveal-delay-4{transition-delay:.32s}
-.hero__content > *{opacity:0;transform:translateY(20px);animation:heroIn 1s var(--ease) forwards}
-.hero__eyebrow{animation-delay:.1s}.hero__title{animation-delay:.25s}.hero__sub{animation-delay:.4s}.hero__cta-row{animation-delay:.55s}.hero__trust{animation-delay:.7s}
-.hero__mockup{opacity:0;transform:translateY(40px) scale(.95);animation:mockupIn 1.4s var(--ease) .3s forwards}
-@keyframes heroIn{to{opacity:1;transform:translateY(0)}}
-@keyframes mockupIn{to{opacity:1;transform:translateY(0) scale(1)}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-
-@media(max-width:600px){
-  body{font-size:16px}.container,.container-narrow{padding:0 22px}
-  .hero{padding:116px 0 64px}.hero__inner{gap:64px}.hero__sub{margin-bottom:36px;font-size:16px}
-  .hero__cta-row{margin-bottom:36px;gap:12px;width:100%}.hero__cta-row .btn{flex:1;min-width:140px}
-  .btn{padding:15px 22px;font-size:15px}.btn--lg{padding:17px 26px;font-size:15.5px}
-  section{padding:80px 0}
-  .problem-card,.pillar,.testimonial,.exp-card,.price-card{padding:32px 26px}
-  .hero__mockup{max-width:280px}.phone{padding:9px;border-radius:40px}
-  .phone__screen{border-radius:32px;padding:26px 17px 18px}
-  .value-row{grid-template-columns:1fr;gap:8px;padding:20px 0}
-  .cta-final{padding:100px 0}.cta-final__row{width:100%}.cta-final__row .btn{flex:1;min-width:150px}
-  .cta-final__trust{gap:16px;flex-direction:column;align-items:center}
-  .faq-item summary{padding:22px 24px;font-size:17px}.faq-item__body{padding:0 24px 24px;font-size:15px}
-  .footer__inner{flex-direction:column;align-items:flex-start;gap:28px}
-  .hero__chip{font-size:11px;padding:10px 13px}.hero__chip--top{left:0%}.hero__chip--bottom{right:0%}
+.value-row{
+  display:grid;grid-template-columns:80px 1fr;gap:20px;
+  padding:20px 0;border-top:1px solid var(--b-subtle);align-items:baseline;
 }
-@media(max-width:380px){.hero__cta-row,.cta-final__row{flex-direction:column}.hero__cta-row .btn,.cta-final__row .btn{width:100%}}
-  </style>
+.value-row:first-child{border-top:none}
+.value-num{font-size:12px;color:var(--t4);letter-spacing:0.05em}
+.value-label{
+  font-family:var(--fd);font-size:21px;font-weight:380;
+  letter-spacing:-0.012em;margin-bottom:6px;
+  font-variation-settings:"opsz" 72;
+}
+.value-desc{font-size:14px;color:var(--t2);line-height:1.65}
+@media(max-width:540px){.value-row{grid-template-columns:1fr;gap:6px}}
+
+/* ─── TESTIMONIOS ────────────────────────────────────────── */
+.testimonials{background:var(--bg-up)}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:72px}
+@media(max-width:860px){.testi-grid{grid-template-columns:1fr}}
+
+.testi{
+  background:var(--bg-card);border:1px solid var(--b-subtle);
+  border-radius:var(--r-xl);padding:44px 40px;
+  transition:all 0.5s var(--ease);position:relative;
+}
+.testi::before{
+  content:'\201C';position:absolute;top:24px;right:32px;
+  font-family:var(--fd);font-size:72px;line-height:1;
+  color:var(--accent);opacity:0.1;pointer-events:none;
+}
+.testi:hover{border-color:var(--b-soft);transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,0.3)}
+.testi__stars{display:flex;gap:2px;margin-bottom:20px}
+.testi__stars svg{width:13px;height:13px;fill:#f9c74f}
+.testi__quote{
+  font-family:var(--fd);font-size:clamp(18px,1.8vw,21px);
+  font-weight:350;letter-spacing:-0.01em;line-height:1.42;
+  margin-bottom:28px;font-variation-settings:"opsz" 72;
+}
+.testi__author{display:flex;align-items:center;gap:13px}
+.testi__avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1.5px solid var(--b-soft)}
+.testi__name{font-size:14.5px;font-weight:500;color:var(--t1);margin-bottom:2px}
+.testi__meta{font-size:12px;color:var(--t3)}
+
+/* ─── COMUNIDAD ──────────────────────────────────────────── */
+.community{position:relative;overflow:hidden}
+.community::before{
+  content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:900px;height:500px;
+  background:radial-gradient(ellipse at center,var(--accent-g) 0%,transparent 70%);
+  filter:blur(80px);opacity:0.5;z-index:0;pointer-events:none;
+}
+.community__inner{position:relative;z-index:1;text-align:center}
+.community__title{margin-bottom:24px}
+.community__lead{
+  font-size:clamp(16px,1.4vw,18px);line-height:1.72;color:var(--t2);
+  max-width:520px;margin:0 auto 52px;
+}
+.community__stats{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.community__stat{text-align:center}
+.community__stat-num{
+  font-family:var(--fd);font-size:clamp(26px,3vw,36px);
+  font-weight:320;letter-spacing:-0.02em;line-height:1;
+  margin-bottom:7px;font-variation-settings:"opsz" 144;
+}
+.community__stat-label{font-size:12.5px;color:var(--t3)}
+.community__divider{width:1px;height:44px;background:var(--b-soft)}
+@media(max-width:540px){
+  .community__divider{width:44px;height:1px}
+  .community__stats{flex-direction:column;gap:24px}
+}
+
+/* ─── PRICING ────────────────────────────────────────────── */
+.pricing__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:52px}
+@media(max-width:860px){.pricing__grid{grid-template-columns:1fr}}
+
+.price-card{
+  background:var(--bg-card);border:1px solid var(--b-subtle);
+  border-radius:var(--r-xl);padding:38px 34px;
+  display:flex;flex-direction:column;
+  transition:all 0.4s var(--ease);position:relative;
+}
+.price-card:hover{border-color:var(--b-soft);transform:translateY(-4px)}
+.price-card--feat{
+  border-color:var(--accent);
+  background:linear-gradient(180deg,rgba(139,109,255,0.06) 0%,var(--bg-card) 60%);
+  box-shadow:0 0 40px rgba(139,109,255,0.08);
+}
+.price-badge{
+  position:absolute;top:22px;right:22px;
+  background:var(--accent);color:#fff;
+  padding:5px 12px;border-radius:var(--r-full);
+  font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
+}
+.price-eyebrow{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-s);font-weight:500;margin-bottom:12px}
+.price-title{
+  font-family:var(--fd);font-size:28px;font-weight:350;
+  letter-spacing:-0.018em;line-height:1.18;margin-bottom:12px;
+  font-variation-settings:"opsz" 96;
+}
+.price-desc{font-size:14px;line-height:1.6;color:var(--t2);margin-bottom:22px}
+.price-amount-row{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
+.price-amount{
+  font-family:var(--fd);font-size:48px;font-weight:320;
+  letter-spacing:-0.025em;line-height:1;
+  font-variation-settings:"opsz" 144;
+}
+.price-unit{font-size:13px;color:var(--t3)}
+.price-sub{font-size:12.5px;color:var(--t3);margin-bottom:22px}
+.price-features{list-style:none;margin-bottom:26px;display:grid;gap:11px}
+.price-features li{
+  display:flex;align-items:flex-start;gap:9px;
+  font-size:14px;line-height:1.5;color:var(--t2);
+}
+.price-features svg{width:15px;height:15px;flex-shrink:0;margin-top:3px;stroke:var(--accent-s)}
+.price-ctas{display:flex;gap:10px;margin-top:auto}
+.price-ctas .btn{flex:1;font-size:14px;padding:14px 16px}
+
+.plans-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+@media(max-width:860px){.plans-row{grid-template-columns:1fr}}
+
+.plan-card{
+  background:var(--bg-card);border:1px solid var(--b-subtle);
+  border-radius:var(--r-lg);padding:26px;
+  display:flex;flex-direction:column;transition:border-color 0.3s;
+}
+.plan-card:hover{border-color:var(--b-soft)}
+.plan-eyebrow{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--t3);font-weight:500;margin-bottom:7px}
+.plan-title{
+  font-family:var(--fd);font-size:20px;font-weight:380;
+  letter-spacing:-0.012em;margin-bottom:9px;
+  font-variation-settings:"opsz" 72;
+}
+.plan-price{
+  font-family:var(--fd);font-size:26px;font-weight:350;
+  letter-spacing:-0.018em;margin-bottom:13px;
+  font-variation-settings:"opsz" 96;
+}
+.plan-price span{font-size:12px;color:var(--t3);margin-left:3px}
+.plan-desc{font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:16px;flex:1}
+.plan-link{font-size:13px;color:var(--accent-s);font-weight:500;transition:gap 0.3s;display:inline-flex;align-items:center;gap:5px}
+.plan-link:hover{gap:9px}
+
+.guarantee{
+  background:var(--bg-card);border:1px solid var(--b-soft);
+  border-radius:var(--r-lg);padding:26px 30px;
+  display:flex;align-items:center;gap:20px;
+  max-width:680px;margin:0 auto;
+}
+.guarantee__icon{
+  width:44px;height:44px;border-radius:11px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent-d) 100%);
+  display:grid;place-items:center;
+}
+.guarantee__icon svg{width:19px;height:19px;stroke:#fff}
+.guarantee__title{font-family:var(--fd);font-size:18px;font-weight:380;margin-bottom:4px;font-variation-settings:"opsz" 72}
+.guarantee__body{font-size:13.5px;color:var(--t2);line-height:1.55}
+@media(max-width:560px){.guarantee{flex-direction:column;text-align:center}}
+
+/* ─── FAQ ────────────────────────────────────────────────── */
+.faq__list{max-width:740px;margin:72px auto 0;display:grid;gap:5px}
+.faq-item{
+  background:var(--bg-card);border:1px solid var(--b-subtle);
+  border-radius:var(--r-lg);overflow:hidden;transition:all 0.4s var(--ease);
+}
+.faq-item[open]{border-color:var(--b-soft);background:var(--bg-card-h)}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:24px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  font-family:var(--fd);font-size:19px;font-weight:380;
+  letter-spacing:-0.012em;color:var(--t1);
+  font-variation-settings:"opsz" 72;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:'';width:26px;height:26px;border-radius:50%;flex-shrink:0;
+  background:rgba(255,255,255,0.06);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f7' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");
+  background-position:center;background-repeat:no-repeat;
+  transition:transform 0.4s var(--ease);
+}
+.faq-item[open] summary::after{transform:rotate(180deg)}
+.faq-item__body{padding:0 28px 24px;font-size:15px;line-height:1.72;color:var(--t2)}
+
+/* ─── CTA FINAL ──────────────────────────────────────────── */
+.cta-final{text-align:center;padding:160px 0;position:relative;overflow:hidden}
+.cta-final::before{
+  content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:1200px;height:600px;
+  background:radial-gradient(ellipse at center,var(--accent-g) 0%,transparent 70%);
+  filter:blur(60px);z-index:0;
+}
+.cta-final__inner{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:0 24px}
+.cta-final__title{
+  font-family:var(--fd);font-size:clamp(36px,5.5vw,64px);
+  font-weight:280;letter-spacing:-0.022em;line-height:1.07;
+  margin-bottom:26px;font-variation-settings:"opsz" 144;
+}
+.cta-final__title em{font-style:italic;color:var(--accent-s);font-weight:280}
+.cta-final__sub{
+  font-size:clamp(16px,1.4vw,18px);line-height:1.7;color:var(--t2);
+  margin-bottom:44px;max-width:500px;margin-left:auto;margin-right:auto;
+}
+.cta-final__row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-final__trust{
+  margin-top:32px;font-size:13px;color:var(--t3);
+  display:flex;gap:22px;justify-content:center;flex-wrap:wrap;
+}
+.cta-final__trust span{display:inline-flex;align-items:center;gap:7px}
+.cta-final__trust svg{stroke:var(--accent-s);opacity:0.7}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+.footer{border-top:1px solid var(--b-subtle);padding:56px 0 36px}
+.footer__inner{
+  max-width:var(--container);margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+}
+.footer__brand{display:flex;flex-direction:column;gap:4px}
+.footer__logo{font-family:var(--fd);font-size:20px;font-weight:400;letter-spacing:-0.015em;font-variation-settings:"opsz" 72}
+.footer__tagline{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--t3);font-weight:500}
+.footer__links{display:flex;gap:26px;list-style:none;flex-wrap:wrap}
+.footer__links a{font-size:13.5px;color:var(--t3);transition:color 0.25s}
+.footer__links a:hover{color:var(--t1)}
+.footer__app-link{color:var(--accent-s)!important;font-weight:500}
+.footer__copy{
+  width:100%;margin-top:28px;padding-top:22px;
+  border-top:1px solid var(--b-subtle);
+  font-size:12.5px;color:var(--t4);text-align:center;
+}
+
+/* ─── REVEAL ANIMATIONS ──────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:0.08s}.rd2{transition-delay:0.16s}
+.rd3{transition-delay:0.24s}.rd4{transition-delay:0.32s}
+
+/* Hero initial anim */
+.hero__content>*{opacity:0;transform:translateY(18px);animation:hi 1s var(--ease) forwards}
+.hero__eyebrow{animation-delay:0.1s}
+.hero__title{animation-delay:0.25s}
+.hero__sub{animation-delay:0.4s}
+.hero__cta-row{animation-delay:0.52s}
+.hero__trust{animation-delay:0.64s}
+.hero__visual{opacity:0;transform:translateY(36px) scale(0.96);animation:vi 1.4s var(--ease) 0.28s forwards}
+@keyframes hi{to{opacity:1;transform:translateY(0)}}
+@keyframes vi{to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* ─── REDUCED MOTION ─────────────────────────────────────── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+@media(max-width:600px){
+  body{font-size:16px}
+  .container,.container-narrow{padding:0 20px}
+  section{padding:72px 0}
+  .hero{padding:110px 0 64px}
+  .hero__title{font-size:clamp(32px,8vw,48px)}
+  .hero__cta-row{width:100%}
+  .hero__cta-row .btn{flex:1;min-width:130px}
+  .btn--lg{padding:16px 24px;font-size:15px}
+  .section-head{margin-bottom:52px}
+  .prob-card,.pillar,.exp-card,.testi,.price-card{padding:28px 22px}
+  .testi::before{font-size:56px;top:20px;right:24px}
+  .hero__visual{max-width:260px}
+  .phone{padding:8px;border-radius:40px}
+  .phone__screen{border-radius:32px;padding:24px 14px 16px}
+  .cta-final{padding:100px 0}
+  .cta-final__row{width:100%}
+  .cta-final__row .btn{flex:1}
+  .cta-final__trust{gap:14px;flex-direction:column;align-items:center}
+  .footer__inner{flex-direction:column;align-items:flex-start;gap:24px}
+  .footer__links{gap:14px 20px}
+  .guarantee{flex-direction:column;text-align:center}
+  .nav{padding:16px 20px}
+}
+@media(max-width:380px){
+  .hero__cta-row{flex-direction:column}
+  .hero__cta-row .btn{width:100%}
+  .cta-final__row{flex-direction:column}
+  .cta-final__row .btn{width:100%}
+}
+</style>
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="nav__inner">
-      <a href="#" class="nav__logo" aria-label="ArjunaFit inicio">
-        <span class="nav__logo-mark">A</span>
-        <span>ArjunaFit</span>
-      </a>
-      <ul class="nav__links">
-        <li><a href="#como-funciona">Cómo funciona</a></li>
-        <li><a href="#experiencia">La app</a></li>
-        <li><a href="#testimonios">Resultados</a></li>
-        <li><a href="#planes">Planes</a></li>
-        <li><a href="#faq">Preguntas</a></li>
-      <li><a href="https://wa.link/hteek6" target="_blank" rel="noopener" onclick="if(window.LANDING)LANDING.track('footer_whatsapp_clicked',{section:'footer'})">💬 WhatsApp</a></li>
-        <li><a href="mailto:arjuna.desarrollador@gmail.com">📧 Soporte</a></li></ul>
-      <a href="https://arjunafit.app/signup" class="nav__cta js-register">Entrar a la app</a>
-      <button class="nav__menu-btn" aria-label="Abrir menú">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
-      </button>
-    </div>
-  </nav>
-
-  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú principal">
-    <button class="mobile-menu__close" aria-label="Cerrar menú">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+<!-- ═══ NAV ══════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#" class="nav__logo" aria-label="ArjunaFit inicio">
+      <span class="nav__logo-mark">A</span>
+      <span>ArjunaFit</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#experiencia">La app</a></li>
+      <li><a href="#testimonios">Resultados</a></li>
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+    </ul>
+    <a href="https://arjunafit.app" class="nav__cta">Entrar a la app</a>
+    <button class="nav__mob" aria-label="Abrir menú">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
     </button>
-    <a href="#como-funciona">Cómo funciona</a>
-    <a href="#experiencia">La app</a>
-    <a href="#testimonios">Resultados</a>
-    <a href="#planes">Planes</a>
-    <a href="#faq">Preguntas</a>
-    <a href="https://arjunafit.app/signup" class="mobile-menu__cta js-register">Entrar a la app</a>
   </div>
+</nav>
 
-  <!-- HERO -->
-  <section id="hero" class="hero" style="padding:120px 0 80px">
-    <div class="hero__inner container">
-      <div class="hero__copy reveal">
-        <div class="eyebrow" style="margin-bottom:24px">Training · Nutrition · AI Coaching</div>
-        <h1 class="hero__h" style="font-family:'Fraunces',serif;font-size:clamp(42px,6.5vw,80px);font-weight:300;line-height:1.06;letter-spacing:-.03em;color:var(--text-primary);margin-bottom:0">
-          Tu transformación no necesita presión.
-          <br><em class="italic-accent" style="font-size:inherit">Necesita acompañamiento.</em>
+<!-- Mobile menu -->
+<div class="mmenu" role="dialog" aria-modal="true">
+  <button class="mmenu__close" aria-label="Cerrar">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+  </button>
+  <a href="#como-funciona">Cómo funciona</a>
+  <a href="#experiencia">La app</a>
+  <a href="#testimonios">Resultados</a>
+  <a href="#planes">Planes</a>
+  <a href="#faq">Preguntas</a>
+  <a href="https://arjunafit.app" class="mmenu__cta">Entrar a la app</a>
+</div>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero__inner">
+
+      <div class="hero__content">
+        <div class="eyebrow hero__eyebrow">Training · Nutrition · AI Coaching</div>
+        <h1 class="h-display hero__title">
+          Tu transformación no necesita presión.<br>
+          <em class="italic-accent">Necesita acompañamiento.</em>
         </h1>
-        <p style="font-size:18px;line-height:1.7;color:var(--text-secondary);margin:28px 0 36px;max-width:480px">
-          Entrenamiento, nutrición LATAM y Coach IA en una app diseñada
-          para que esta vez no lo hagas sola.
+        <p class="hero__sub">
+          Entrenamiento, nutrición y un coach inteligente en una sola app.
+          Diseñada para que esta vez no lo hagas sola.
         </p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:28px">
-          <a href="https://arjunafit.app/signup" class="cta-primary">Probar 7 días gratis</a>
-          <a href="https://wa.link/hteek6" target="_blank" rel="noopener"
-             class="cta-secondary"
-             style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);font-size:14px"
-             onclick="if(window.LANDING)LANDING.track('landing_whatsapp_clicked',{section:'hero'})">
-            💬 ¿Tienes dudas? Hablar con Arjuna
-          </a>
-          <a href="#como-funciona" style="font-size:13px;color:rgba(255,255,255,.35);text-decoration:none;margin-top:4px;display:block">Ver cómo funciona ↓</a>
+        <div class="hero__cta-row">
+          <a href="https://arjunafit.app" class="btn btn--primary btn--lg">Entrar a la app</a>
+          <a href="#como-funciona" class="btn btn--ghost btn--lg">Ver cómo funciona</a>
         </div>
-        <div style="display:flex;align-items:center;gap:8px">
-          <div style="width:20px;height:20px;border-radius:50%;
-            background:linear-gradient(135deg,#7c3aed,#ec4899);
-            display:flex;align-items:center;justify-content:center;
-            font-size:10px;font-weight:800;color:white">+</div>
-          <span style="font-size:13px;color:var(--text-muted)">+200 personas ya están dentro</span>
+        <div class="hero__trust">
+          <div class="hero__avatars">
+            <img src="https://arjunafit.com/assets/img/recomendaciones/1.jpeg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+            <img src="https://arjunafit.com/assets/img/recomendaciones/2.jpeg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+            <img src="https://arjunafit.com/assets/img/recomendaciones/3.jpeg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+            <span class="hero__avatar-fb">+</span>
+          </div>
+          <span><strong>+200</strong> personas ya están dentro</span>
         </div>
       </div>
 
-      <!-- Hero mockup -->
-      <div class="hero__media reveal reveal-delay-1">
-        <div style="position:relative;background:rgba(10,10,20,.9);border-radius:36px;
-          border:1px solid rgba(255,255,255,.1);overflow:hidden;padding:20px 16px;
-          box-shadow:0 40px 120px rgba(0,0,0,.7)">
-          <div style="display:flex;align-items:center;gap:6px;margin-bottom:16px">
-            <div style="width:8px;height:8px;border-radius:50%;background:#ef4444;opacity:.5"></div>
-            <div style="width:8px;height:8px;border-radius:50%;background:#f59e0b;opacity:.5"></div>
-            <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;opacity:.5"></div>
-            <div style="flex:1"></div>
-            <div style="font-size:11px;color:rgba(255,255,255,.3)">9:41 · 100%</div>
-          </div>
-          <div style="font-size:11px;color:rgba(52,211,153,.7);margin-bottom:12px;
-            display:flex;align-items:center;gap:6px">
-            <div style="width:6px;height:6px;border-radius:50%;background:rgba(52,211,153,.7)"></div>
-            Día 2 de 7 gratis · Reto de glúteos
-          </div>
-          <div style="background:rgba(255,255,255,.04);border-radius:16px;padding:14px;margin-bottom:10px">
-            <div style="font-size:11px;color:rgba(255,255,255,.3);margin-bottom:8px">Nutrición del día</div>
-            <div style="height:6px;border-radius:3px;background:rgba(255,255,255,.06);margin-bottom:6px">
-              <div style="height:6px;border-radius:3px;width:28%;background:linear-gradient(90deg,#7c3aed,#ec4899)"></div>
+      <div class="hero__visual">
+        <div class="hero__chip chip--tl">
+          <span class="chip__dot"></span>
+          App disponible ahora
+        </div>
+
+        <div class="phone">
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <svg width="0" height="0" style="position:absolute">
+              <defs>
+                <linearGradient id="ag" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#8b6dff"/><stop offset="50%" stop-color="#c97bff"/><stop offset="100%" stop-color="#ff7eb9"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="phone__status"><span>9:41</span><span>● ● ● 100%</span></div>
+            <div class="phone__greeting">
+              <div class="phone__hello">Hola, <em>Sofía</em></div>
+              <div class="phone__hello-sub">Día 23 · Semana 4</div>
             </div>
-            <div style="font-size:11px;color:rgba(124,58,237,.7)">Registra tu almuerzo con foto</div>
-          </div>
-          <div style="background:rgba(255,255,255,.04);border-radius:16px;padding:14px;margin-bottom:10px">
-            <div style="font-size:10px;color:rgba(255,255,255,.3);margin-bottom:4px">HOY · GLÚTEOS</div>
-            <div style="font-size:14px;font-weight:700;color:var(--text-primary)">Empuje de glúteo</div>
-            <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:2px">Hip Thrust · 4 × 12 · calentamiento listo</div>
-          </div>
-          <div style="background:rgba(255,255,255,.04);border-radius:16px;padding:14px">
-            <div style="font-size:10px;color:rgba(255,255,255,.3);margin-bottom:4px">ARJU PREPARÓ TU DÍA</div>
-            <div style="font-size:13px;font-weight:600;color:var(--text-primary)">Arroz con pollo + brócoli</div>
-            <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:2px">42g proteína · 480 kcal</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-      <div style="text-align:center;margin-top:48px;padding:32px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--r-xl)">
-        <p style="font-size:16px;font-weight:600;color:var(--text-primary);margin-bottom:8px">¿Tienes otra duda?</p>
-        <p style="font-size:14px;color:var(--text-tertiary);margin-bottom:20px">Puedes escribirnos y te ayudamos a elegir el reto o plan adecuado.</p>
-        <a href="https://wa.link/hteek6" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25);border-radius:12px;color:rgba(37,211,102,.9);font-size:14px;font-weight:700;text-decoration:none" onclick="if(window.LANDING)LANDING.track('faq_whatsapp_clicked',{section:'faq'})">💬 Hablar con Arjuna</a>
-      </div>
-    </section>
-
-  <!-- PROBLEMA -->
-  <section class="problem">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow">El problema real</div>
-        <h2 class="h-section">Empezar es fácil.<br><span class="italic-accent">Sostenerlo es lo difícil.</span></h2>
-        <p class="section-head__lead">No fallas por falta de disciplina. Fallas porque nadie te enseñó a organizarte bien — y nadie estaba cuando más lo necesitabas.</p>
-      </div>
-      <div class="problem__grid">
-        <article class="problem-card reveal reveal-delay-1">
-          <div class="problem-card__num">01</div>
-          <h3 class="problem-card__title">"No sé qué entrenar ni cómo hacerlo bien."</h3>
-          <p class="problem-card__body">Sin guía clara, cada sesión es improvisar. Y sin progresión real, el cuerpo deja de responder después de unas semanas.</p>
-        </article>
-        <article class="problem-card reveal reveal-delay-2">
-          <div class="problem-card__num">02</div>
-          <h3 class="problem-card__title">"No sé qué comer ni qué cocinar hoy."</h3>
-          <p class="problem-card__body">Las apps de nutrición son complicadas. Las dietas son de otro país. Y al final terminas comiendo cualquier cosa porque nadie te ayudó a decidir.</p>
-        </article>
-        <article class="problem-card reveal reveal-delay-3">
-          <div class="problem-card__num">03</div>
-          <h3 class="problem-card__title">"Empiezo motivada y a las dos semanas abandono."</h3>
-          <p class="problem-card__body">Porque no hay sistema. No hay acompañamiento. Y cuando llega un día difícil, no hay nadie que te recuerde por qué empezaste.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <!-- FOUNDER + VIDEO — Pieza central de confianza -->
-  <section id="fundador" style="background:var(--bg-base);padding:80px 0">
-    <div class="container-narrow">
-
-      <!-- Section header -->
-      <div class="reveal" style="text-align:center;margin-bottom:48px">
-        <div class="eyebrow" style="margin-bottom:14px">El fundador</div>
-        <h2 class="h-section" style="max-width:600px;margin:0 auto">
-          Detrás de ArjunaFit<br>
-          <span class="italic-accent">hay una persona real.</span>
-        </h2>
-        <p style="font-size:16px;line-height:1.75;color:var(--text-secondary);
-          margin:20px auto 0;max-width:500px">
-          ArjunaFit no nació para meterte más presión. Nació para acompañarte
-          en los días donde normalmente abandonarías.
-        </p>
-      </div>
-
-      <!-- Video — pieza central -->
-      <div class="reveal" style="position:relative;width:100%;aspect-ratio:16/9;
-        background:linear-gradient(135deg,#080612 0%,#11082a 50%,#0c0820 100%);
-        border-radius:20px;overflow:hidden;
-        border:1px solid rgba(255,255,255,.07);
-        box-shadow:0 48px 120px rgba(0,0,0,.75),0 0 0 1px rgba(124,58,237,.08);
-        margin-bottom:40px">
-
-        <!-- Ambient -->
-        <div style="position:absolute;inset:0;
-          background:radial-gradient(ellipse at 50% 40%,rgba(124,58,237,.15) 0%,transparent 65%);
-          pointer-events:none"></div>
-
-        <!-- Content center -->
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;
-          align-items:center;justify-content:center;gap:20px">
-
-          <!-- Avatar ring -->
-          <div style="width:100px;height:100px;border-radius:50%;
-            background:rgba(124,58,237,.1);border:1.5px solid rgba(196,181,253,.18);
-            display:flex;align-items:center;justify-content:center;position:relative">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
-              stroke="rgba(196,181,253,.35)" stroke-width="1.5" stroke-linecap="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-            </svg>
-            <!-- Poster slot: replace svg with <img src="/assets/img/arjuna-poster.jpg"> when ready -->
-          </div>
-
-          <!-- Play button -->
-          <!-- ════════════════════════════════════════════
-               ACTIVAR VIDEO: reemplazar desde aquí...
-
-          <video
-            src="/assets/video/arjuna-founder.mp4"
-            poster="/assets/img/arjuna-poster.jpg"
-            controls playsinline preload="none"
-            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-          </video>
-
-          ...hasta aquí — y eliminar el bloque de placeholder debajo.
-               ════════════════════════════════════════════ -->
-
-          <div style="width:76px;height:76px;border-radius:50%;
-            background:rgba(255,255,255,.06);
-            border:1.5px solid rgba(255,255,255,.14);
-            backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-            display:flex;align-items:center;justify-content:center;cursor:pointer;
-            transition:background .25s,border-color .25s,transform .25s"
-            onmouseover="this.style.background='rgba(124,58,237,.28)';this.style.borderColor='rgba(196,181,253,.45)';this.style.transform='scale(1.06)'"
-            onmouseout="this.style.background='rgba(255,255,255,.06)';this.style.borderColor='rgba(255,255,255,.14)';this.style.transform='scale(1)'">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="white" style="margin-left:3px">
-              <polygon points="5,3 19,12 5,21"/>
-            </svg>
-          </div>
-
-          <div style="text-align:center">
-            <div style="font-size:14px;font-weight:500;color:rgba(255,255,255,.45);
-              letter-spacing:.01em">Arjuna · Fundador de ArjunaFit</div>
-            <div style="font-size:12px;color:rgba(255,255,255,.2);margin-top:3px">
-              Video de presentación · próximamente</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Below video: quote + ecosystem -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;
-        align-items:start" class="reveal founder-below">
-
-        <div>
-          <blockquote style="font-size:19px;line-height:1.7;color:var(--text-primary);
-            font-weight:400;letter-spacing:-.01em;
-            border-left:2px solid rgba(124,58,237,.5);padding-left:22px;margin-bottom:24px">
-            &ldquo;Cada rutina, cada receta y cada mensaje de Arju tiene un criterio claro:
-            que funcione para personas reales, no para Instagram.&rdquo;
-          </blockquote>
-          <div style="display:flex;align-items:center;gap:10px">
-            <div style="width:8px;height:8px;border-radius:50%;
-              background:var(--accent);box-shadow:0 0 10px var(--accent);
-              flex-shrink:0;animation:pulse 2.4s infinite"></div>
-            <div>
-              <div style="font-size:13px;font-weight:600;color:var(--text-primary)">Arjuna · Fundador</div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:1px">7 años acompañando procesos reales</div>
+            <div class="phone__ring">
+              <svg class="ring-svg" viewBox="0 0 80 80">
+                <circle class="ring-bg" cx="40" cy="40" r="30"/>
+                <circle class="ring-fill" cx="40" cy="40" r="30"/>
+              </svg>
+              <div>
+                <div class="ring-pct">70%</div>
+                <div class="ring-label">Progreso del reto</div>
+                <div class="ring-day">Mejor que la semana pasada</div>
+              </div>
+            </div>
+            <div class="phone__tile">
+              <div class="phone__tile-row">
+                <div>
+                  <div class="phone__tile-eyebrow">Hoy</div>
+                  <div class="phone__tile-title">Glúteos · Fuerza</div>
+                  <div class="phone__tile-meta">4 × 12 · Hip Thrust 60kg</div>
+                </div>
+                <span class="phone__tile-pill">45 min</span>
+              </div>
+            </div>
+            <div class="phone__tile">
+              <div class="phone__tile-eyebrow">Nutrición</div>
+              <div class="phone__tile-title">2.100 kcal</div>
+              <div class="phone__tile-meta">142g proteína · 60% completado</div>
             </div>
           </div>
         </div>
 
-        <div>
-          <div style="font-size:11px;font-weight:700;letter-spacing:.08em;
-            text-transform:uppercase;color:var(--accent-soft);margin-bottom:18px">
-            El ecosistema completo</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
-            <li style="display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text-secondary)">
-              <span style="font-size:16px">🏋️</span>
-              <span><strong style="color:var(--text-primary)">Entrenamiento guiado</strong> — calentamiento, técnica, progresión</span>
-            </li>
-            <li style="display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text-secondary)">
-              <span style="font-size:16px">🥗</span>
-              <span><strong style="color:var(--text-primary)">Nutrición sin estrés</strong> — foto IA, texto libre, editable</span>
-            </li>
-            <li style="display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text-secondary)">
-              <span style="font-size:16px">🍳</span>
-              <span><strong style="color:var(--text-primary)">Recetario LATAM</strong> — arepa, fríjoles, plátano, avena</span>
-            </li>
-            <li style="display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text-secondary)">
-              <span style="font-size:16px">🧠</span>
-              <span><strong style="color:var(--text-primary)">Coach Arju IA</strong> — humano, breve, sin culpa</span>
-            </li>
-            <li style="display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text-secondary)">
-              <span style="font-size:16px">📊</span>
-              <span><strong style="color:var(--text-primary)">Progreso y cierre</strong> — cada día cuenta, mañana seguimos</span>
-            </li>
-          </ul>
+        <div class="hero__chip chip--br">
+          <span class="chip__dot"></span>
+          +3kg en hip thrust
         </div>
-      </div>
-
-      <!-- CTA after video -->
-      <div class="reveal" style="text-align:center;margin-top:48px">
-        <a href="https://arjunafit.app/signup" class="cta-primary" style="display:inline-block">
-          Probar 7 días gratis
-        </a>
       </div>
 
     </div>
-  </section>
+  </div>
+</header>
 
-  <style>
-    @media(max-width:720px){
-      .founder-below{grid-template-columns:1fr!important;gap:32px!important}
-      .founder-below blockquote{font-size:17px!important}
-    }
-  </style>
-
-  <!-- ARJU ORGANIZA TU DÍA -->
-  <section style="background:var(--bg-elevated)">
-    <div class="container">
-      <div class="section-head reveal" style="text-align:center;margin-bottom:48px">
-        <div class="eyebrow" style="margin-bottom:14px">La solución</div>
-        <h2 class="h-section">Arju organiza<br><span class="italic-accent">tu día.</span></h2>
-        <p class="section-head__lead" style="max-width:520px;margin:20px auto 0">
-          Abres la app y Arju ya preparó lo importante: tu entreno, tu comida,
-          tu receta y tu siguiente paso. Sin adivinar. Sin decidir solo.
-        </p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="reveal">
-        <div class="eco-card" style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:24px">
-          <div style="font-size:28px;margin-bottom:12px">🏋️</div>
-          <div style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:6px">Qué entrenar hoy</div>
-          <div style="font-size:13px;color:var(--text-tertiary);line-height:1.6">Entreno listo, nombres fáciles, calentamiento guiado y tips de Arju para cada ejercicio.</div>
-        </div>
-        <div class="eco-card" style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:24px">
-          <div style="font-size:28px;margin-bottom:12px">🥗</div>
-          <div style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:6px">Qué comer y registrar</div>
-          <div style="font-size:13px;color:var(--text-tertiary);line-height:1.6">Toma una foto o escribe lo que comiste. Arju estima los macros y muestra resultado editable.</div>
-        </div>
-        <div class="eco-card" style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:24px">
-          <div style="font-size:28px;margin-bottom:12px">💬</div>
-          <div style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:6px">Acompañamiento real</div>
-          <div style="font-size:13px;color:var(--text-tertiary);line-height:1.6">Arju está cuando dudas, cuando te duele algo o cuando un día estuvo difícil. Sin presión. Con contexto.</div>
-        </div>
-      </div>
-      <style>@media(max-width:640px){.eco-card{border-radius:16px!important}div[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;gap:12px!important}}</style>
+<!-- ═══ PROBLEMA ══════════════════════════════════════════════════ -->
+<section class="problem">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">El problema real</div>
+      <h2 class="h-section">Empezar es fácil.<br><span class="italic-accent">Sostenerse es lo difícil.</span></h2>
+      <p class="section-head__lead">La mayoría no falla por falta de motivación. Falla porque las herramientas que tiene no la entienden.</p>
     </div>
-  </section>
+    <div class="problem__grid">
+      <article class="prob-card reveal rd1">
+        <div class="prob-card__num">01</div>
+        <h3 class="prob-card__title">Apps frías que no te conocen</h3>
+        <p class="prob-card__body">Rutinas genéricas para cualquiera y para nadie. Sin ajuste según tu cuerpo, tu historia ni las semanas en las que sí puedes y las que no.</p>
+      </article>
+      <article class="prob-card reveal rd2">
+        <div class="prob-card__num">02</div>
+        <h3 class="prob-card__title">Dietas pensadas para otro país</h3>
+        <p class="prob-card__body">Quinoa, salmón, kale. Comida que ni encuentras ni quieres comer. Falta una nutrición real — con arroz, frijol, arepa y los sabores que sí conoces.</p>
+      </article>
+      <article class="prob-card reveal rd3">
+        <div class="prob-card__num">03</div>
+        <h3 class="prob-card__title">Empezar sola, abandonar sola</h3>
+        <p class="prob-card__body">Sin alguien que te recuerde por qué empezaste, los días difíciles ganan. Y a la tercera semana ya nadie sabe si seguiste o lo dejaste otra vez.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <!-- PRICING -->
-  <section id="planes" class="pricing">
-    <div class="container">
-      <div class="section-head pricing__intro reveal">
-        <div class="eyebrow">Cómo acompañarte</div>
-        <h2 class="h-section">Elige cómo<br><span class="italic-accent">quieres empezar.</span></h2>
-      <p style="text-align:center;margin-top:16px;font-size:14px;color:var(--text-tertiary)">
-        ¿No sabes cuál elegir?
-        <a href="https://wa.link/hteek6" target="_blank" rel="noopener"
-           style="color:rgba(139,92,246,.8);font-weight:600;text-decoration:none;margin-left:6px"
-           onclick="if(window.LANDING)LANDING.track('pricing_whatsapp_clicked',{section:'pricing'})">💬 Hablar con Arjuna →</a>
-      </p>
-        <p class="section-head__lead">Puedes probar un reto gratis durante 7 días, o entrar directo a un plan personalizado.</p>
+<!-- ═══ SOLUCIÓN ══════════════════════════════════════════════════ -->
+<section id="solucion" class="solution">
+  <div class="container">
+    <div class="section-head reveal" style="position:relative;z-index:1">
+      <div class="eyebrow">Nuestra forma</div>
+      <h2 class="h-section">Construido para que<br><span class="italic-accent">esta vez sí continúes.</span></h2>
+      <p class="section-head__lead">ArjunaFit es un ecosistema diseñado alrededor de la adherencia — lo único que distingue un cambio real de uno temporal.</p>
+    </div>
+    <div class="solution__pillars">
+      <article class="pillar reveal rd1">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v0a3 3 0 0 0 0 6"/><path d="M12 2a3 3 0 0 1 3 3v0a3 3 0 0 1 0 6"/><path d="M9 11a3 3 0 0 0-3 3v1a3 3 0 0 0 3 3"/><path d="M15 11a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3"/><path d="M9 18a3 3 0 0 0 3 3 3 3 0 0 0 3-3"/></svg>
+        </div>
+        <h3 class="pillar__title">Coach IA que sí te entiende</h3>
+        <p class="pillar__body">Inteligencia entrenada con tu historial, lesiones y progreso. Te pregunta cómo amaneciste antes de mandarte una rutina. Te responde cuando dudas a las 11 de la noche.</p>
+      </article>
+      <article class="pillar reveal rd2">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C7 6 5 10 5 14a7 7 0 0 0 14 0c0-4-2-8-7-12z"/><path d="M10 14c0-2 1-3 2-4"/></svg>
+        </div>
+        <h3 class="pillar__title">Nutrición real, hecha para LATAM</h3>
+        <p class="pillar__body">Un plan que entiende cómo comes en tu casa y en tu ciudad. Más de 600.000 alimentos — incluyendo arepa, frijol, plátano y aguacate con sus macros exactos.</p>
+      </article>
+      <article class="pillar reveal rd3">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3 class="pillar__title">Acompañamiento diario</h3>
+        <p class="pillar__body">Arjuna lleva 7 años entrenando personas — y está detrás de cada rutina. Seguimiento semanal y la sensación de que alguien sí está pendiente de tus avances.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CÓMO FUNCIONA ════════════════════════════════════════════ -->
+<section id="como-funciona" class="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2 class="h-section">Sin complicaciones.<br><span class="italic-accent">Solo abre la app y sigue.</span></h2>
+      <p class="section-head__lead">No tienes que diseñar nada ni decidir nada. La app ya sabe qué te toca hoy.</p>
+    </div>
+    <div class="how__steps">
+      <article class="how-step reveal rd1">
+        <div class="how-step__num">01</div>
+        <div class="how-step__line"></div>
+        <h3 class="how-step__title">Abres la app</h3>
+        <p class="how-step__body">Lo primero que ves es lo que te toca hoy. Sin menús infinitos, sin configurar nada. Claridad desde el primer segundo.</p>
+      </article>
+      <article class="how-step reveal rd2">
+        <div class="how-step__num">02</div>
+        <div class="how-step__line"></div>
+        <h3 class="how-step__title">Haces lo de hoy</h3>
+        <p class="how-step__body">Tu entrenamiento y tus comidas del día, ya listos. Solo sigues el plan. Si algo no funciona, se lo dices a Arjuna IA y se ajusta.</p>
+      </article>
+      <article class="how-step reveal rd3">
+        <div class="how-step__num">03</div>
+        <div class="how-step__line"></div>
+        <h3 class="how-step__title">Registras tu avance</h3>
+        <p class="how-step__body">Marcas lo que completaste. Toma diez segundos. Es lo que le permite a la app acompañarte mejor mañana.</p>
+      </article>
+      <article class="how-step reveal rd4">
+        <div class="how-step__num">04</div>
+        <h3 class="how-step__title">Recibes tu guía</h3>
+        <p class="how-step__body">La app aprende de ti y ajusta el camino. Cada semana es un poco más tuya. Siempre sabes cuál es el siguiente paso.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ECOSISTEMA ════════════════════════════════════════════════ -->
+<section class="ecosystem">
+  <div class="container">
+    <div class="ecosystem__inner">
+      <div class="eco-visual reveal">
+        <svg class="eco-svg" viewBox="0 0 460 460" preserveAspectRatio="none">
+          <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8b6dff" stop-opacity="0.5"/><stop offset="100%" stop-color="#ff7eb9" stop-opacity="0.15"/></linearGradient></defs>
+          <line x1="230" y1="230" x2="110" y2="55"  stroke="url(#lg)" stroke-width="1" stroke-dasharray="3 4"/>
+          <line x1="230" y1="230" x2="390" y2="95"  stroke="url(#lg)" stroke-width="1" stroke-dasharray="3 4"/>
+          <line x1="230" y1="230" x2="450" y2="250" stroke="url(#lg)" stroke-width="1" stroke-dasharray="3 4"/>
+          <line x1="230" y1="230" x2="330" y2="410" stroke="url(#lg)" stroke-width="1" stroke-dasharray="3 4"/>
+          <line x1="230" y1="230" x2="75"  y2="370" stroke="url(#lg)" stroke-width="1" stroke-dasharray="3 4"/>
+          <line x1="230" y1="230" x2="15"  y2="230" stroke="url(#lg)" stroke-width="1" stroke-dasharray="3 4"/>
+        </svg>
+        <div class="eco-node eco-node--core">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Tu ecosistema
+        </div>
+        <div class="eco-node eco-n1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Coach IA 24/7</div>
+        <div class="eco-node eco-n2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Nutrición LATAM</div>
+        <div class="eco-node eco-n3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Entrenamientos</div>
+        <div class="eco-node eco-n4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 12l4-4 4 4 5-7"/></svg>Progreso</div>
+        <div class="eco-node eco-n5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Comunidad</div>
+        <div class="eco-node eco-n6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Adherencia</div>
       </div>
+      <div class="reveal rd2">
+        <div class="eyebrow" style="margin-bottom:20px">Un sistema, no una app</div>
+        <h2 class="h-section">Todo conectado.<br><span class="italic-accent">Todo coherente.</span></h2>
+        <p class="lead" style="margin-top:22px">Lo que comes informa cómo entrenas. Lo que entrenas informa cómo descansas. Lo que sientes informa lo que Arjuna IA te recomienda mañana.</p>
+        <ul class="eco-list">
+          <li><span class="eco-num">/01</span><div class="eco-text"><strong>Contexto inteligente</strong><span>Cada parte del sistema sabe lo que la otra hace. Sin formularios repetidos.</span></div></li>
+          <li><span class="eco-num">/02</span><div class="eco-text"><strong>Adaptación continua</strong><span>Si te lesionas, si viajas, si tienes un mes intenso — el plan se ajusta. No empiezas de cero.</span></div></li>
+          <li><span class="eco-num">/03</span><div class="eco-text"><strong>Datos sin obsesión</strong><span>Ves tu progreso de forma clara y calmada. Sin gráficas que te abrumen.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="pricing__grid">
-        <article class="price-card price-card--featured reveal reveal-delay-1">
-          <span class="price-card__badge">El más elegido</span>
-          <div class="price-card__eyebrow">Reto · 7 días gratis</div>
-          <h3 class="price-card__title">Reto de glúteos</h3>
-          <p class="price-card__desc">Hip Thrust, Búlgaras y Peso Muerto progresivos. Glúteos más firmes con técnica y constancia.</p>
-          <div class="price-card__price"><span class="price-card__amount">Gratis</span></div>
-          <p class="price-card__sub">7 días de prueba · sin tarjeta de crédito</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:-8px;margin-bottom:0">Después, $32 USD para desbloquear el reto completo</p>
-          <ul class="price-card__features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Entrenos progresivos de glúteos</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Plan nutricional con macros LATAM</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Coach IA 24/7</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Seguimiento de progreso</li>
-          </ul>
-          <div class="price-card__cta-row">
-            <a href="https://arjunafit.app/signup?product=challenge_glutes" class="btn btn--accent js-register">Empezar gratis →</a>
+<!-- ═══ EXPERIENCIA ════════════════════════════════════════════════ -->
+<section id="experiencia" class="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">La experiencia</div>
+      <h2 class="h-section">Diseñada para usarse,<br><span class="italic-accent">no para mirarla.</span></h2>
+      <p class="section-head__lead">Cada pantalla está pensada para que sepas exactamente qué hacer hoy.</p>
+    </div>
+    <div class="exp-grid">
+      <article class="exp-card exp-card--large reveal">
+        <div class="exp-eyebrow">Dashboard</div>
+        <h3 class="exp-title">Tu día, claro desde que abres la app.</h3>
+        <p class="exp-body">Sin scrolls infinitos. Ves tu entrenamiento del día, tu progreso del reto y un mensaje de Arjuna si necesitas algo.</p>
+        <div class="exp-mock">
+          <div class="exp-mock-row"><span class="exp-mock-label">Reto · Día 23 de 56</span><span class="exp-mock-val">41%</span></div>
+          <div class="exp-bar-wrap"><div class="exp-bar-fill" style="width:41%"></div></div>
+          <div class="exp-mock-row" style="margin-top:10px"><span class="exp-mock-label">Hoy · Glúteos · Fuerza</span><span class="exp-mock-val">45 min</span></div>
+          <div class="exp-mock-row"><span class="exp-mock-label">Proteína del día</span><span class="exp-mock-val">96 / 142g</span></div>
+          <div class="exp-mock-row">
+            <span class="exp-mock-label">Racha actual</span>
+            <span class="exp-mock-val exp-mock-val--accent">
+              7 días
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            </span>
           </div>
-        </article>
-
-        <article class="price-card reveal reveal-delay-2">
-          <div class="price-card__eyebrow">Reto · 7 días gratis</div>
-          <h3 class="price-card__title">Reto para bajar la pancita</h3>
-          <p class="price-card__desc">Entrenamiento y nutrición para reducir abdomen sin complicarte. Déficit sostenible.</p>
-          <div class="price-card__price"><span class="price-card__amount">Gratis</span></div>
-          <p class="price-card__sub">7 días de prueba · sin tarjeta de crédito</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:-8px;margin-bottom:0">Después, $32 USD para desbloquear el reto completo</p>
-          <ul class="price-card__features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Entreno + nutrición integrados</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Déficit calórico personalizado</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Coach IA 24/7</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Hábitos sostenibles</li>
-          </ul>
-          <div class="price-card__cta-row">
-            <a href="https://arjunafit.app/signup?product=challenge_belly" class="btn btn--accent js-register">Empezar gratis →</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="plans-secondary reveal">
-        <article class="plan-row">
-          <div class="plan-row__eyebrow">Plan personalizado</div>
-          <h3 class="plan-row__title">Aumento de masa muscular</h3>
-          <div class="plan-row__price">$72 <span>USD/mes</span></div>
-          <p class="plan-row__desc">Rutina y nutrición 100% adaptadas. Seguimiento semanal directo. Sin prueba gratis.</p>
-          <a href="https://arjunafit.app/signup?product=custom_muscle_gain" class="plan-row__link">Empezar ahora →</a>
-          <a href="https://wa.link/hteek6" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-tertiary);text-decoration:none;margin-top:10px" onclick="if(window.LANDING)LANDING.track('custom_plan_whatsapp_clicked',{product:'custom_muscle_gain'})">💬 Resolver dudas</a>
-        </article>
-        <article class="plan-row">
-          <div class="plan-row__eyebrow">Plan personalizado</div>
-          <h3 class="plan-row__title">Reducción de porcentaje graso</h3>
-          <div class="plan-row__price">$72 <span>USD/mes</span></div>
-          <p class="plan-row__desc">Definición y reducción de grasa corporal personalizada. Sin prueba gratis.</p>
-          <a href="https://arjunafit.app/signup?product=custom_fat_loss" class="plan-row__link">Empezar ahora →</a>
-          <a href="https://wa.link/hteek6" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-tertiary);text-decoration:none;margin-top:10px" onclick="if(window.LANDING)LANDING.track('custom_plan_whatsapp_clicked',{product:'custom_fat_loss'})">💬 Resolver dudas</a>
-
-      <div class="guarantee reveal">
-        <div class="guarantee__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-        <div>
-          <div class="guarantee__title">Garantía de resultados</div>
-          <p class="guarantee__body">Si sigues el plan al pie de la letra y no ves cambios en 4 semanas, te devolvemos el 100% sin preguntas.</p>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- NUTRICIÓN + ENTRENAMIENTO (condensado) -->
-  <section style="background:var(--bg-base)">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center" class="reveal nutri-grid">
-        <!-- Nutrition -->
-        <div>
-          <div class="eyebrow" style="margin-bottom:16px">Nutrición sin estrés</div>
-          <h3 style="font-family:'Fraunces',serif;font-size:clamp(24px,3vw,34px);
-            font-weight:350;line-height:1.25;color:var(--text-primary);margin-bottom:16px">
-            Comer bien no tiene que<br><em style="color:var(--accent-soft)">complicarse.</em>
-          </h3>
-          <p style="font-size:15px;line-height:1.72;color:var(--text-secondary);margin-bottom:20px">
-            Registra con foto, escribe lo que comiste o elige una receta. Arju hace el resto
-            con estimaciones útiles y editables.
-          </p>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:13px;color:var(--text-tertiary);display:flex;gap:8px">
-              <span style="color:var(--accent-soft)">→</span>
-              Foto IA en segundos — resultado editable antes de guardar</li>
-            <li style="font-size:13px;color:var(--text-tertiary);display:flex;gap:8px">
-              <span style="color:var(--accent-soft)">→</span>
-              Escribe en lenguaje natural: "2 huevos y una arepa"</li>
-            <li style="font-size:13px;color:var(--text-tertiary);display:flex;gap:8px">
-              <span style="color:var(--accent-soft)">→</span>
-              Recetario LATAM: arepa, fríjoles, plátano, avena</li>
-          </ul>
+      </article>
+      <article class="exp-card reveal rd1">
+        <div class="exp-eyebrow">Arjuna IA</div>
+        <h3 class="exp-title">Una conversación, no un formulario.</h3>
+        <p class="exp-body">La IA sabe tu plan, tu progreso y tus lesiones. Pregunta lo que necesites.</p>
+        <div class="exp-chat">
+          <div class="bubble bubble--u">Me duele un poco la rodilla hoy.</div>
+          <div class="bubble bubble--ai">Vamos a saltar la sentadilla y hacer hip thrust + abductor. Tu rodilla descansa, los glúteos siguen trabajando. ¿Te parece?</div>
+          <div class="bubble bubble--u">Perfecto, gracias.</div>
         </div>
-        <!-- Training -->
-        <div>
-          <div class="eyebrow" style="margin-bottom:16px">Entrenamiento guiado</div>
-          <h3 style="font-family:'Fraunces',serif;font-size:clamp(24px,3vw,34px);
-            font-weight:350;line-height:1.25;color:var(--text-primary);margin-bottom:16px">
-            Entrena con dirección,<br><em style="color:rgba(250,204,21,.7)">no con miedo.</em>
-          </h3>
-          <p style="font-size:15px;line-height:1.72;color:var(--text-secondary);margin-bottom:20px">
-            Cada entrenamiento te dice qué hacer, cómo hacerlo y cómo avanzar
-            sin sentirte perdida ni presionada.
-          </p>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:13px;color:var(--text-tertiary);display:flex;gap:8px">
-              <span style="color:rgba(250,204,21,.6)">→</span>
-              Calentamiento guiado antes de subir peso</li>
-            <li style="font-size:13px;color:var(--text-tertiary);display:flex;gap:8px">
-              <span style="color:rgba(250,204,21,.6)">→</span>
-              "Empuje de glúteo", no "Hip Thrust" — nombres que entiendes</li>
-            <li style="font-size:13px;color:var(--text-tertiary);display:flex;gap:8px">
-              <span style="color:rgba(250,204,21,.6)">→</span>
-              Progresión sin miedo — Arju sugiere, tú decides</li>
-          </ul>
+      </article>
+      <article class="exp-card reveal rd2">
+        <div class="exp-eyebrow">Adherencia</div>
+        <h3 class="exp-title">8 semanas vistas de un solo golpe.</h3>
+        <p class="exp-body">Cada día completado es un punto de constancia. No es presión — es claridad.</p>
+        <div class="streak-grid">
+          <span class="s l4"></span><span class="s l4"></span><span class="s l3"></span><span class="s l4"></span><span class="s l4"></span><span class="s l4"></span><span class="s l2"></span>
+          <span class="s l3"></span><span class="s l4"></span><span class="s l4"></span><span class="s l4"></span><span class="s l3"></span><span class="s l4"></span><span class="s l2"></span>
+          <span class="s l4"></span><span class="s l3"></span><span class="s l4"></span><span class="s l4"></span><span class="s l4"></span><span class="s l1"></span><span class="s l4"></span>
+          <span class="s l4"></span><span class="s l4"></span><span class="s l4"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span>
+          <span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span>
+          <span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span>
+          <span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span>
+          <span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span>
         </div>
-      </div>
-      <style>@media(max-width:720px){.nutri-grid{grid-template-columns:1fr!important;gap:40px!important}}</style>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIOS -->
-  <section id="testimonios" class="testimonials">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow">Resultados reales</div>
-        <h2 class="h-section">Personas como tú,<br><span class="italic-accent">que esta vez sí terminaron.</span></h2>
-      </div>
-      <div class="testimonials__grid">
-        <article class="testimonial reveal reveal-delay-1">
-          <div class="testimonial__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg></div>
-          <p class="testimonial__quote">"Perdí 15 kg en 3 meses sin pasar hambre. El seguimiento de Arjuna fue lo que hizo la diferencia — siempre pendiente, nunca presionando."</p>
-          <div class="testimonial__author"><img src="https://arjunafit.com/assets/img/recomendaciones/1.jpeg" alt="" class="testimonial__avatar" loading="lazy" /><div><div class="testimonial__name">Maria C.</div><div class="testimonial__meta">27 años · Bogotá, Colombia</div></div></div>
-        </article>
-        <article class="testimonial reveal reveal-delay-2">
-          <div class="testimonial__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg></div>
-          <p class="testimonial__quote">"Gané 8 kg de músculo y bajé al 14% de grasa. La mejor inversión que hice. El plan nutricional fue lo que cambió todo para mí."</p>
-          <div class="testimonial__author"><img src="https://arjunafit.com/assets/img/recomendaciones/2.jpeg" alt="" class="testimonial__avatar" loading="lazy" /><div><div class="testimonial__name">Danna V.</div><div class="testimonial__meta">24 años · Madrid, España</div></div></div>
-        </article>
-        <article class="testimonial reveal reveal-delay-3">
-          <div class="testimonial__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg></div>
-          <p class="testimonial__quote">"Recuperé mi figura post-parto en 3 meses. Nunca me sentí tan bien conmigo misma. Arjuna es exigente, pero por eso funciona."</p>
-          <div class="testimonial__author"><img src="https://arjunafit.com/assets/img/recomendaciones/3.jpeg" alt="" class="testimonial__avatar" loading="lazy" /><div><div class="testimonial__name">Alejandra T.</div><div class="testimonial__meta">29 años · Miami, EE.UU.</div></div></div>
-        </article>
-        <article class="testimonial reveal reveal-delay-4">
-          <div class="testimonial__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5" fill="#f9c74f"/></svg></div>
-          <p class="testimonial__quote">"Nunca había logrado crecer mis glúteos así. El método funciona y el Coach IA me ayuda cuando entreno sola en la casa."</p>
-          <div class="testimonial__author"><img src="https://arjunafit.com/assets/img/recomendaciones/4.jpeg" alt="" class="testimonial__avatar" loading="lazy" /><div><div class="testimonial__name">Dayana G.</div><div class="testimonial__meta">38 años · Sabaneta, Colombia</div></div></div>
-        </article>
-      </div>
-    </div>
-  </section>
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow">Preguntas frecuentes</div>
-        <h2 class="h-section">Todo lo que quizás<br><span class="italic-accent">te estás preguntando.</span></h2>
-      </div>
-      <div class="faq__list">
-        <details class="faq-item"><summary>¿Qué incluye la prueba de 7 días gratis?</summary><div class="faq-item__body">Acceso completo a la app: rutinas diarias, plan nutricional personalizado, Coach IA 24/7, registro de comidas con foto IA, recetario LATAM y seguimiento de progreso. Sin tarjeta de crédito, sin compromiso.</div></details>
-<details class="faq-item"><summary>¿Qué retos puedo probar gratis?</summary><div class="faq-item__body">Los dos retos disponibles con 7 días gratis son: Reto de glúteos y Reto para bajar la pancita. Ambos incluyen entrenamiento, nutrición y Coach IA.</div></details>
-<details class="faq-item"><summary>¿Los planes personalizados tienen prueba gratis?</summary><div class="faq-item__body">No. Los planes personalizados (Aumento de masa muscular y Reducción de porcentaje graso) requieren pago inmediato de $72 USD/mes para iniciar. No tienen período de prueba.</div></details>
-<details class="faq-item"><summary>¿Qué diferencia hay entre un reto y un plan personalizado?</summary><div class="faq-item__body">Los retos son productos de entrada con enfoque específico (glúteos o pancita), disponibles con 7 días gratis. Los planes personalizados son seguimiento 1:1 más cercano, adaptado a objetivos como masa muscular o reducción de grasa, con ajustes continuos según tu progreso. Los planes cuestan $72 USD/mes y no tienen prueba.</div></details>
-<details class="faq-item"><summary>¿Qué pasa cuando terminan los 7 días?</summary><div class="faq-item__body">Si te quedaste con ganas de continuar, el acceso al reto completo se activa con un pago. Si decides no continuar, simplemente no haces nada — el acceso se detiene sin cargos automáticos.</div></details>
-<details class="faq-item"><summary>¿Necesito experiencia previa?</summary><div class="faq-item__body">No. Los retos están diseñados para todos los niveles — desde quien nunca ha entrenado hasta quien ya tiene experiencia. El calentamiento guiado y los tips de Arju ayudan a empezar bien.</div></details>
-        </div></div></section>  <!-- CTA FINAL -->
-  <section class="cta-final" style="background:radial-gradient(ellipse at 50% 0%,rgba(124,58,237,.18) 0%,transparent 60%),var(--bg-base)">
-    <div class="container-narrow" style="text-align:center;padding:100px 0">
+<!-- ═══ TRANSFORMACIÓN ════════════════════════════════════════════ -->
+<section class="transform">
+  <div class="container">
+    <div class="transform__inner">
       <div class="reveal">
-        <div class="eyebrow" style="margin-bottom:20px">Tu turno</div>
-        <h2 class="h-section" style="margin-bottom:20px">
-          Esta vez, no tienes<br>
-          <span class="italic-accent">que hacerlo sola.</span>
-        </h2>
-        <p style="font-size:16px;line-height:1.75;color:var(--text-secondary);
-          max-width:460px;margin:0 auto 36px">
-          Empieza con un reto, prueba ArjunaFit 7 días gratis y descubre
-          cómo se siente tener claridad cada día.
-        </p>
-        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:20px">
-          <a href="https://arjunafit.app/signup" class="cta-primary">Probar 7 días gratis</a>
-          <a href="https://wa.link/hteek6" target="_blank" rel="noopener" class="cta-secondary" onclick="if(window.LANDING)LANDING.track('landing_whatsapp_clicked',{section:'hero'})" style="display:flex;align-items:center;gap:8px">
-            <span>💬</span> Hablar con Arjuna
-          </a>
-        </div>
-        <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap">
-          <span style="font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:6px">
-            <span style="color:rgba(52,211,153,.7)">✓</span> Sin tarjeta de crédito</span>
-          <span style="font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:6px">
-            <span style="color:rgba(52,211,153,.7)">✓</span> Acceso inmediato</span>
-          <span style="font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:6px">
-            <span style="color:rgba(52,211,153,.7)">✓</span> 7 días completos</span>
-        </div>
+        <div class="eyebrow" style="margin-bottom:20px">La transformación real</div>
+        <h2 class="h-section">No es bajar de peso.<br>Es <span class="italic-accent">recuperar tu relación</span> con tu cuerpo.</h2>
+        <p class="lead" style="margin-top:24px">ArjunaFit no promete cambios milagrosos en dos semanas. Promete algo mejor: que esta vez, lo que empieces sí lo sostengas.</p>
+      </div>
+      <div class="reveal rd1">
+        <div class="value-row"><span class="value-num">/01</span><div><div class="value-label">Claridad</div><p class="value-desc">Sabes exactamente qué hacer cada día. Sin dudas, sin investigar en YouTube.</p></div></div>
+        <div class="value-row"><span class="value-num">/02</span><div><div class="value-label">Sostenibilidad</div><p class="value-desc">Un plan que se adapta a tu vida real — viajes, lesiones, semanas difíciles incluidas.</p></div></div>
+        <div class="value-row"><span class="value-num">/03</span><div><div class="value-label">Acompañamiento</div><p class="value-desc">Nunca sola. La IA, la comunidad y Arjuna están detrás cada semana.</p></div></div>
+        <div class="value-row"><span class="value-num">/04</span><div><div class="value-label">Hábitos</div><p class="value-desc">Después del reto, el cambio se queda. Porque construiste un sistema, no una dieta.</p></div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <div class="footer__logo">ArjunaFit</div>
-        <div class="footer__tagline">Training · Nutrition · AI Coaching</div>
-      </div>
-      <ul class="footer__links">
-        <li><a href="#como-funciona">Cómo funciona</a></li>
-        <li><a href="#planes">Planes</a></li>
-        <li><a href="https://arjunafit.com/terminos.html">Términos</a></li>
-        <li><a href="https://arjunafit.com/privacidad.html">Privacidad</a></li>
-        <li><a href="https://arjunafit.app/signup" class="footer__app-link">Entrar a la app</a></li>
-      
-        <li><a href="https://wa.link/hteek6" target="_blank" rel="noopener" onclick="if(window.LANDING)LANDING.track('footer_whatsapp_clicked',{section:'footer'})">💬 WhatsApp</a></li>
-        <li><a href="mailto:arjuna.desarrollador@gmail.com">📧 Soporte</a></li>
-      </ul>      <div class="footer__copy">© <span class="js-year">2026</span> ArjunaFit · Hecho en Medellín, Colombia · Con cuidado.</div>
+<!-- ═══ TESTIMONIOS ════════════════════════════════════════════════ -->
+<section id="testimonios" class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Resultados reales</div>
+      <h2 class="h-section">Personas como tú,<br><span class="italic-accent">que esta vez sí terminaron.</span></h2>
     </div>
-  </footer>
+    <div class="testi-grid">
+      <article class="testi reveal rd1">
+        <div class="testi__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg></div>
+        <p class="testi__quote">"Perdí 15 kg en 3 meses sin pasar hambre. El seguimiento de Arjuna fue lo que hizo la diferencia — siempre pendiente, nunca presionando."</p>
+        <div class="testi__author"><img src="https://arjunafit.com/assets/img/recomendaciones/1.jpeg" alt="" class="testi__avatar" loading="lazy"/><div><div class="testi__name">Maria C.</div><div class="testi__meta">27 años · Bogotá, Colombia</div></div></div>
+      </article>
+      <article class="testi reveal rd2">
+        <div class="testi__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg></div>
+        <p class="testi__quote">"Gané 8 kg de músculo y bajé al 14% de grasa. La mejor inversión que hice. El plan nutricional fue lo que cambió todo para mí."</p>
+        <div class="testi__author"><img src="https://arjunafit.com/assets/img/recomendaciones/2.jpeg" alt="" class="testi__avatar" loading="lazy"/><div><div class="testi__name">Danna V.</div><div class="testi__meta">24 años · Madrid, España</div></div></div>
+      </article>
+      <article class="testi reveal rd3">
+        <div class="testi__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg></div>
+        <p class="testi__quote">"Recuperé mi figura post-parto en 3 meses. Nunca me sentí tan bien conmigo misma. Arjuna es exigente, pero por eso funciona."</p>
+        <div class="testi__author"><img src="https://arjunafit.com/assets/img/recomendaciones/3.jpeg" alt="" class="testi__avatar" loading="lazy"/><div><div class="testi__name">Alejandra T.</div><div class="testi__meta">29 años · Miami, EE.UU.</div></div></div>
+      </article>
+      <article class="testi reveal rd4">
+        <div class="testi__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg></div>
+        <p class="testi__quote">"Nunca había logrado crecer mis glúteos así. El método funciona y el Coach IA me ayuda cuando entreno sola en casa."</p>
+        <div class="testi__author"><img src="https://arjunafit.com/assets/img/recomendaciones/4.jpeg" alt="" class="testi__avatar" loading="lazy"/><div><div class="testi__name">Dayana G.</div><div class="testi__meta">38 años · Sabaneta, Colombia</div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <script>
+<!-- ═══ COMUNIDAD ══════════════════════════════════════════════════ -->
+<section class="community">
+  <div class="container-narrow">
+    <div class="community__inner reveal">
+      <div class="eyebrow" style="margin-bottom:22px;display:inline-flex;justify-content:center">No estás sola</div>
+      <h2 class="h-section community__title">Detrás de la app<br><span class="italic-accent">hay personas reales.</span></h2>
+      <p class="community__lead">Una comunidad tranquila de personas que están en lo mismo que tú. Sin competencia, sin comparación. Solo gente que entiende lo que es volver a empezar — y quedarse esta vez.</p>
+      <div class="community__stats">
+        <div class="community__stat"><div class="community__stat-num">+200</div><div class="community__stat-label">Personas activas</div></div>
+        <div class="community__divider"></div>
+        <div class="community__stat"><div class="community__stat-num">7 años</div><div class="community__stat-label">Arjuna acompañando</div></div>
+        <div class="community__divider"></div>
+        <div class="community__stat"><div class="community__stat-num">Cada día</div><div class="community__stat-label">Seguimiento real</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ════════════════════════════════════════════════════ -->
+<section id="planes" class="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Cómo acompañarte</div>
+      <h2 class="h-section">Elige el ritmo<br><span class="italic-accent">en el que quieres caminar.</span></h2>
+      <p class="section-head__lead">Todos incluyen acceso completo a la app, Coach IA y nutrición personalizada.</p>
+    </div>
+    <div class="pricing__grid">
+      <article class="price-card price-card--feat reveal rd1">
+        <span class="price-badge">El más elegido</span>
+        <div class="price-eyebrow">Reto · 8 semanas</div>
+        <h3 class="price-title">Glúteos + Piernas</h3>
+        <p class="price-desc">Activación máxima con ciencia real. Hip Thrust, Búlgaras y Peso Muerto progresivos.</p>
+        <div class="price-amount-row"><span class="price-amount">$32</span><span class="price-unit">USD · pago único</span></div>
+        <p class="price-sub">Acceso completo a las 8 semanas</p>
+        <ul class="price-features">
+          <li><svg fill="none" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>3 entrenamientos/semana progresivos</li>
+          <li><svg fill="none" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Plan nutricional con macros LATAM</li>
+          <li><svg fill="none" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Seguimiento de cargas y PRs</li>
+          <li><svg fill="none" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Coach IA 24/7 + adaptación por lesiones</li>
+        </ul>
+        <div class="price-ctas">
+          <a href="https://arjunafit.app" class="btn btn--ghost">Entrar a la app</a>
+          <a href="https://pay.hotmart.com/X103890862C?bid=1771573313683" class="btn btn--accent">Comprar reto</a>
+        </div>
+      </article>
+      <article class="price-card reveal rd2">
+        <div class="price-eyebrow">Reto · 8 semanas</div>
+        <h3 class="price-title">Abdomen + Definición</h3>
+        <p class="price-desc">HIIT + Core + déficit calórico inteligente. Quema grasa sin pasar hambre.</p>
+        <div class="price-amount-row"><span class="price-amount">$32</span><span class="price-unit">USD · pago único</span></div>
+        <p class="price-sub">Acceso completo a las 8 semanas</p>
+        <ul class="price-features">
+          <li><svg fill="none" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>5 sesiones/semana de HIIT + Core</li>
+          <li><svg fill="none" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Déficit calórico personalizado</li>
+          <li><svg fill="none" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fotos de progreso semanales</li>
+          <li><svg fill="none" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Coach IA 24/7 + adaptación por lesiones</li>
+        </ul>
+        <div class="price-ctas">
+          <a href="https://arjunafit.app" class="btn btn--ghost">Entrar a la app</a>
+          <a href="https://pay.hotmart.com/X103890862C?bid=1771573313683" class="btn btn--accent">Comprar reto</a>
+        </div>
+      </article>
+    </div>
+    <div class="plans-row reveal">
+      <article class="plan-card">
+        <div class="plan-eyebrow">Virtual</div>
+        <h3 class="plan-title">Plan personalizado</h3>
+        <div class="plan-price">$72 <span>USD/mes</span></div>
+        <p class="plan-desc">Rutina adaptada a tu horario y objetivos. Seguimiento semanal con Arjuna.</p>
+        <a href="https://pay.hotmart.com/M105694336W?bid=1777962608286" class="plan-link">Empezar ahora →</a>
+      </article>
+      <article class="plan-card">
+        <div class="plan-eyebrow">Virtual 1:1</div>
+        <h3 class="plan-title">Acompañamiento diario</h3>
+        <div class="plan-price">$155 <span>USD/mes</span></div>
+        <p class="plan-desc">Atención personalizada todos los días. Clases en vivo 1:1 ilimitadas con Arjuna.</p>
+        <a href="https://pay.hotmart.com/W105694361S" class="plan-link">Empezar ahora →</a>
+      </article>
+      <article class="plan-card">
+        <div class="plan-eyebrow">Presencial · Antioquia</div>
+        <h3 class="plan-title">Entrenamiento en gym</h3>
+        <div class="plan-price">$238 <span>USD/mes</span></div>
+        <p class="plan-desc">Sesiones presenciales con corrección técnica en vivo. Plan nutricional completo.</p>
+        <a href="https://pay.hotmart.com/J105694382D?bid=1777963478749" class="plan-link">Empezar ahora →</a>
+      </article>
+    </div>
+    <div class="guarantee reveal">
+      <div class="guarantee__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <div>
+        <div class="guarantee__title">Garantía de resultados</div>
+        <p class="guarantee__body">Si sigues el plan al pie de la letra y no ves cambios en 4 semanas, te devolvemos el 100% sin preguntas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2 class="h-section">Todo lo que quizás<br><span class="italic-accent">te estás preguntando.</span></h2>
+    </div>
+    <div class="faq__list">
+      <details class="faq-item"><summary>¿Qué incluye la prueba de 7 días gratis?</summary><div class="faq-item__body">Acceso completo a la app: rutinas diarias, plan nutricional personalizado, Coach IA 24/7, contador de calorías con más de 600.000 alimentos y seguimiento de progreso. Sin tarjeta de crédito, sin compromiso.</div></details>
+      <details class="faq-item"><summary>¿Necesito experiencia previa en el gym?</summary><div class="faq-item__body">No. Los programas están diseñados para todos los niveles. Cada rutina se adapta a tu condición actual, lesiones e historial.</div></details>
+      <details class="faq-item"><summary>¿Cuánto tiempo al día tengo que dedicar?</summary><div class="faq-item__body">Entre 45 y 60 minutos al día, 3 a 5 veces por semana según el reto. Diseñado para personas con vida real, no para quienes viven en el gym.</div></details>
+      <details class="faq-item"><summary>¿Puedo hacerlo sin equipo o sin gym?</summary><div class="faq-item__body">Sí. Tenemos rutinas adaptadas para casa con o sin equipamiento. La app ajusta los ejercicios según lo que tengas disponible.</div></details>
+      <details class="faq-item"><summary>¿Qué pasa después de los 7 días gratis?</summary><div class="faq-item__body">Si quieres continuar, el reto cuesta $32 USD (pago único, 8 semanas completas). Si decides no continuar, el acceso se detiene sin cargos automáticos.</div></details>
+      <details class="faq-item"><summary>¿Y si me lesiono o no puedo entrenar una semana?</summary><div class="faq-item__body">El plan se adapta. Le cuentas a Arjuna IA qué pasa y reajusta tu semana. Si viajas, si tienes un mes intenso — ArjunaFit se acomoda. No empiezas de cero.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ══════════════════════════════════════════════════ -->
+<section class="cta-final">
+  <div class="cta-final__inner">
+    <div class="eyebrow" style="display:inline-flex;justify-content:center;margin-bottom:28px">Tu turno</div>
+    <h2 class="cta-final__title">Esta vez,<br><em>sí continuemos.</em></h2>
+    <p class="cta-final__sub">Sabemos que empezar no es lo difícil. Lo difícil es mantenerse. Por eso existe ArjunaFit.</p>
+    <div class="cta-final__row">
+      <a href="https://arjunafit.app" class="btn btn--primary btn--lg">Entrar a la app</a>
+      <a href="https://wa.me/573207301621?text=Hola%20Arjuna!%20Quiero%20m%C3%A1s%20info" class="btn btn--ghost btn--lg">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Hablar con Arjuna
+      </a>
+    </div>
+    <div class="cta-final__trust">
+      <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Acceso inmediato a la app</span>
+      <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Garantía 4 semanas</span>
+      <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Sin tarjeta de crédito</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__logo">ArjunaFit</div>
+      <div class="footer__tagline">Training · Nutrition · AI Coaching</div>
+    </div>
+    <ul class="footer__links">
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="https://arjunafit.com/terminos.html">Términos</a></li>
+      <li><a href="https://arjunafit.com/privacidad.html">Privacidad</a></li>
+      <li><a href="https://arjunafit.app" class="footer__app-link">Entrar a la app</a></li>
+    </ul>
+    <div class="footer__copy">© <span id="yr">2026</span> ArjunaFit · Hecho en Medellín, Colombia · Con cuidado.</div>
+  </div>
+</footer>
+
+<script>
 (function(){
   'use strict';
+
+  // Nav scroll
   const nav = document.querySelector('.nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 24);
-  }, { passive: true });
+  }, {passive: true});
 
-  const menuBtn = document.querySelector('.nav__menu-btn');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const closeBtn = document.querySelector('.mobile-menu__close');
-  if (menuBtn) menuBtn.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; });
-  if (closeBtn) closeBtn.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; });
-  document.querySelectorAll('.mobile-menu a').forEach(l => l.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }));
+  // Mobile menu
+  const mob = document.querySelector('.nav__mob');
+  const mmenu = document.querySelector('.mmenu');
+  const close = document.querySelector('.mmenu__close');
+  const open = () => { mmenu.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const shut = () => { mmenu.classList.remove('open'); document.body.style.overflow = ''; };
+  if(mob) mob.addEventListener('click', open);
+  if(close) close.addEventListener('click', shut);
+  document.querySelectorAll('.mmenu a').forEach(a => a.addEventListener('click', shut));
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Reveal on scroll
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && els.length) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold: 0.1, rootMargin: '0px 0px -50px 0px'});
+    els.forEach(el => io.observe(el));
+  } else {
+    els.forEach(el => el.classList.add('in'));
+  }
 
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); }
+      if(target){ e.preventDefault(); window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth'}); }
     });
   });
 
-  const yearEl = document.querySelector('.js-year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  // Year
+  const yr = document.getElementById('yr');
+  if(yr) yr.textContent = new Date().getFullYear();
 })();
-  </script>
-
-
-<script>
-// Track CTA clicks with product context
-document.querySelectorAll('a[href*="signup?product="]').forEach(function(link) {
-  link.addEventListener('click', function() {
-    var url = new URL(link.href);
-    var product = url.searchParams.get('product');
-    // Store selection in sessionStorage for cross-tab persistence
-    try { sessionStorage.setItem('af-pending-product', product); } catch(e) {}
-    // Analytics
-    if (typeof AF !== 'undefined' && AF.track) {
-      AF.track('landing_product_selected', { product, cta: link.textContent.trim() });
-      AF.track('landing_cta_clicked', { product, cta: link.textContent.trim(), experiment: 'landing_cta', variant: 'A' });
-    }
-  });
-});
-// Capture UTMs from landing URL
-(function() {
-  var qp = new URLSearchParams(window.location.search);
-  ['utm_source','utm_campaign','utm_content','utm_medium'].forEach(function(k) {
-    var v = qp.get(k); if (v) localStorage.setItem('af-' + k.replace('_','-'), v);
-  });
-})();
-
-// Baseline: track landing view
-try { if (typeof AF !== 'undefined') AF.track('landing_viewed', { source: document.referrer ? 'referral' : 'direct' }); } catch(e) {}
 </script>
-
 </body>
 </html>
