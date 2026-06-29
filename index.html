@@ -949,6 +949,70 @@ section{padding:120px 0;position:relative}
 @keyframes hi{to{opacity:1;transform:translateY(0)}}
 @keyframes vi{to{opacity:1;transform:translateY(0) scale(1)}}
 
+/* ─── HERO TRUST STRIP ───────────────────────────────────── */
+.hero__trust-strip{
+  display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px;
+}
+.hero__trust-strip span{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;color:var(--t3);
+}
+.hero__trust-strip svg{stroke:var(--accent-s);opacity:0.8}
+
+/* ─── MID CTA ────────────────────────────────────────────── */
+.mid-cta{
+  background:linear-gradient(135deg,rgba(139,109,255,0.08) 0%,rgba(201,123,255,0.05) 100%);
+  border-top:1px solid rgba(139,109,255,0.15);
+  border-bottom:1px solid rgba(139,109,255,0.15);
+  padding:64px 0;
+}
+.mid-cta__inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:40px;flex-wrap:wrap;
+}
+.mid-cta__label{
+  font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent-s);font-weight:500;margin-bottom:10px;
+}
+.mid-cta__title{
+  font-family:var(--fd);font-size:clamp(24px,2.8vw,34px);
+  font-weight:300;letter-spacing:-0.018em;line-height:1.15;
+  font-variation-settings:"opsz" 144;
+}
+.mid-cta__action{display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0}
+.mid-cta__sub{font-size:12px;color:var(--t3);text-align:center}
+@media(max-width:680px){
+  .mid-cta__inner{flex-direction:column;text-align:center}
+  .mid-cta__action{width:100%}
+  .mid-cta__action .btn{width:100%}
+}
+
+/* ─── STICKY BAR MOBILE ──────────────────────────────────── */
+.sticky-bar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:rgba(10,10,15,0.96);
+  backdrop-filter:blur(20px) saturate(1.4);
+  -webkit-backdrop-filter:blur(20px) saturate(1.4);
+  border-top:1px solid var(--b-soft);
+  padding:12px 20px 16px;
+  align-items:center;justify-content:space-between;gap:12px;
+  transform:translateY(100%);
+  transition:transform 0.4s var(--ease);
+  padding-bottom:max(16px, env(safe-area-inset-bottom));
+}
+.sticky-bar.visible{transform:translateY(0)}
+.sticky-bar__text{font-size:13px;color:var(--t2);line-height:1.35}
+.sticky-bar__text strong{color:var(--t1);display:block;font-size:14px;font-weight:500}
+.sticky-bar .btn{flex-shrink:0;padding:13px 22px;font-size:14px}
+@media(max-width:768px){.sticky-bar{display:flex}}
+
+/* ─── ECOSYSTEM MOBILE ───────────────────────────────────── */
+@media(max-width:860px){
+  .eco-visual{display:none}
+  .ecosystem__inner{grid-template-columns:1fr}
+}
+
 /* ─── REDUCED MOTION ─────────────────────────────────────── */
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
@@ -1040,9 +1104,27 @@ section{padding:120px 0;position:relative}
           Diseñada para que esta vez no lo hagas sola.
         </p>
         <div class="hero__cta-row">
-          <a href="https://arjunafit.app" class="btn btn--primary btn--lg">Entrar a la app</a>
+          <a href="https://arjunafit.app" class="btn btn--primary btn--lg">
+            Empezar 7 días gratis
+          </a>
           <a href="#como-funciona" class="btn btn--ghost btn--lg">Ver cómo funciona</a>
         </div>
+
+        <div class="hero__trust-strip">
+          <span>
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Sin tarjeta de crédito
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Cancela cuando quieras
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Acceso inmediato
+          </span>
+        </div>
+
         <div class="hero__trust">
           <div class="hero__avatars">
             <img src="https://arjunafit.com/assets/img/recomendaciones/1.jpeg" alt="" loading="lazy" onerror="this.style.display='none'"/>
@@ -1453,6 +1535,22 @@ section{padding:120px 0;position:relative}
   </div>
 </section>
 
+<!-- ═══ MID CTA ════════════════════════════════════════════════════ -->
+<section class="mid-cta">
+  <div class="container-narrow">
+    <div class="mid-cta__inner reveal">
+      <div class="mid-cta__text">
+        <p class="mid-cta__label">¿Ya convencida?</p>
+        <h3 class="mid-cta__title">Empieza hoy.<br><span class="italic-accent">Los primeros 7 días son gratis.</span></h3>
+      </div>
+      <div class="mid-cta__action">
+        <a href="https://arjunafit.app" class="btn btn--accent btn--lg">Empezar 7 días gratis</a>
+        <p class="mid-cta__sub">Sin tarjeta · Sin compromiso</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ PARA TI SI ═════════════════════════════════════════════════ -->
 <section class="fit-check">
   <div class="container-narrow">
@@ -1643,6 +1741,15 @@ section{padding:120px 0;position:relative}
   </div>
 </section>
 
+<!-- ═══ STICKY BAR MOBILE ══════════════════════════════════════════ -->
+<div class="sticky-bar" id="stickyBar" aria-hidden="true">
+  <div class="sticky-bar__text">
+    <strong>7 días gratis</strong>
+    Sin tarjeta · Cancela cuando quieras
+  </div>
+  <a href="https://arjunafit.app" class="btn btn--accent">Empezar gratis</a>
+</div>
+
 <!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
 <footer class="footer">
   <div class="footer__inner">
@@ -1680,6 +1787,23 @@ section{padding:120px 0;position:relative}
   if(mob) mob.addEventListener('click', open);
   if(close) close.addEventListener('click', shut);
   document.querySelectorAll('.mmenu a').forEach(a => a.addEventListener('click', shut));
+
+  // Sticky bar mobile — aparece tras pasar el hero
+  const stickyBar = document.getElementById('stickyBar');
+  const heroEl = document.querySelector('.hero');
+  if(stickyBar && heroEl){
+    const showAfter = () => {
+      const heroBottom = heroEl.getBoundingClientRect().bottom;
+      if(heroBottom < 0){
+        stickyBar.classList.add('visible');
+        stickyBar.setAttribute('aria-hidden','false');
+      } else {
+        stickyBar.classList.remove('visible');
+        stickyBar.setAttribute('aria-hidden','true');
+      }
+    };
+    window.addEventListener('scroll', showAfter, {passive:true});
+  }
 
   // Reveal on scroll
   const els = document.querySelectorAll('.reveal');
